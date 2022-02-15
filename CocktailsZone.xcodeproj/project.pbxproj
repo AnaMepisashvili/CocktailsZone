@@ -9,23 +9,39 @@
 /* Begin PBXBuildFile section */
 		2B27CE8327BA754900D7DA1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27CE8227BA754900D7DA1B /* AppDelegate.swift */; };
 		2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27CE8427BA754900D7DA1B /* SceneDelegate.swift */; };
-		2B27CE8727BA754900D7DA1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27CE8627BA754900D7DA1B /* ViewController.swift */; };
-		2B27CE8A27BA754900D7DA1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B27CE8827BA754900D7DA1B /* Main.storyboard */; };
+		2B27CE8A27BA754900D7DA1B /* OnboardingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B27CE8827BA754900D7DA1B /* OnboardingViewController.storyboard */; };
 		2B27CE8D27BA754900D7DA1B /* CocktailsZone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B27CE8B27BA754900D7DA1B /* CocktailsZone.xcdatamodeld */; };
-		2B27CE8F27BA754A00D7DA1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B27CE8E27BA754A00D7DA1B /* Assets.xcassets */; };
 		2B27CE9227BA754A00D7DA1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B27CE9027BA754A00D7DA1B /* LaunchScreen.storyboard */; };
+		2B5420B827BA7E8800E82EA7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420B727BA7E8800E82EA7 /* OnboardingViewController.swift */; };
+		2B5420C427BA808900E82EA7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420C327BA808900E82EA7 /* RegistrationViewController.swift */; };
+		2B5420C627BA809300E82EA7 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420C527BA809300E82EA7 /* RegistrationViewController.storyboard */; };
+		2B5420C827BA80BB00E82EA7 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420C727BA80BB00E82EA7 /* TabBarController.storyboard */; };
+		2B5420CC27BA87AB00E82EA7 /* OnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420CB27BA87AB00E82EA7 /* OnboardingDataSource.swift */; };
+		2B5420D027BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420CE27BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift */; };
+		2B5420D427BA8CBC00E82EA7 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420D327BA8CBC00E82EA7 /* OnboardingSlide.swift */; };
+		2B5420D827BC02FA00E82EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420D727BC02FA00E82EA7 /* Assets.xcassets */; };
+		2B5420DA27BC1EC300E82EA7 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420D927BC1EC300E82EA7 /* LoginViewController.storyboard */; };
+		2B5420DC27BC1ED400E82EA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B27CE7F27BA754900D7DA1B /* CocktailsZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailsZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B27CE8227BA754900D7DA1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B27CE8427BA754900D7DA1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B27CE8627BA754900D7DA1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2B27CE8927BA754900D7DA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B27CE8927BA754900D7DA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OnboardingViewController.storyboard; sourceTree = "<group>"; };
 		2B27CE8C27BA754900D7DA1B /* CocktailsZone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CocktailsZone.xcdatamodel; sourceTree = "<group>"; };
-		2B27CE8E27BA754A00D7DA1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B27CE9127BA754A00D7DA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B27CE9327BA754A00D7DA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5420B727BA7E8800E82EA7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		2B5420C327BA808900E82EA7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		2B5420C527BA809300E82EA7 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
+		2B5420C727BA80BB00E82EA7 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		2B5420CB27BA87AB00E82EA7 /* OnboardingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataSource.swift; sourceTree = "<group>"; };
+		2B5420CE27BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B5420D327BA8CBC00E82EA7 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		2B5420D727BC02FA00E82EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B5420D927BC1EC300E82EA7 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +74,200 @@
 		2B27CE8127BA754900D7DA1B /* CocktailsZone */ = {
 			isa = PBXGroup;
 			children = (
-				2B27CE8227BA754900D7DA1B /* AppDelegate.swift */,
-				2B27CE8427BA754900D7DA1B /* SceneDelegate.swift */,
-				2B27CE8627BA754900D7DA1B /* ViewController.swift */,
-				2B27CE8827BA754900D7DA1B /* Main.storyboard */,
-				2B27CE8E27BA754A00D7DA1B /* Assets.xcassets */,
-				2B27CE9027BA754A00D7DA1B /* LaunchScreen.storyboard */,
-				2B27CE9327BA754A00D7DA1B /* Info.plist */,
-				2B27CE8B27BA754900D7DA1B /* CocktailsZone.xcdatamodeld */,
+				2B27CE9927BA755100D7DA1B /* App */,
+				2B27CE9A27BA760500D7DA1B /* Resources */,
+				2B27CE9D27BA767000D7DA1B /* Core */,
+				2B27CE9E27BA767800D7DA1B /* Model */,
+				2B27CE9F27BA768100D7DA1B /* Scenes */,
+				2B27CEA027BA769500D7DA1B /* Supporting Files */,
 			);
 			path = CocktailsZone;
+			sourceTree = "<group>";
+		};
+		2B27CE9927BA755100D7DA1B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2B27CE8227BA754900D7DA1B /* AppDelegate.swift */,
+				2B27CE8427BA754900D7DA1B /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2B27CE9A27BA760500D7DA1B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B27CE9B27BA761B00D7DA1B /* Image */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B27CE9B27BA761B00D7DA1B /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2B5420D727BC02FA00E82EA7 /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		2B27CE9C27BA762600D7DA1B /* Extemsions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extemsions;
+			sourceTree = "<group>";
+		};
+		2B27CE9D27BA767000D7DA1B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2B27CE9C27BA762600D7DA1B /* Extemsions */,
+				2B27CEA327BA76F400D7DA1B /* Network Layer */,
+				2B27CEA427BA770B00D7DA1B /* CoreData */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2B27CE9E27BA767800D7DA1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B5420D327BA8CBC00E82EA7 /* OnboardingSlide.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B27CE9F27BA768100D7DA1B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2B27CEA227BA76C800D7DA1B /* Launch Screen */,
+				2B5420B627BA7CFC00E82EA7 /* Onbarding Screen */,
+				2B5420B927BA7F8100E82EA7 /* Login Screen */,
+				2B5420BA27BA7F9700E82EA7 /* Registration Screen */,
+				2B5420BB27BA7FAC00E82EA7 /* Tab Bar Controller */,
+				2B5420BC27BA800000E82EA7 /* Search Screen */,
+				2B5420BD27BA802400E82EA7 /* Favorites Screen */,
+				2B5420BE27BA803C00E82EA7 /* Settings Screen */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2B27CEA027BA769500D7DA1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B27CEA127BA76B100D7DA1B /* Settings */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B27CEA127BA76B100D7DA1B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2B27CE9327BA754A00D7DA1B /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2B27CEA227BA76C800D7DA1B /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2B27CE9027BA754A00D7DA1B /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		2B27CEA327BA76F400D7DA1B /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		2B27CEA427BA770B00D7DA1B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2B27CE8B27BA754900D7DA1B /* CocktailsZone.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2B5420B627BA7CFC00E82EA7 /* Onbarding Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2B5420CA27BA85FB00E82EA7 /* View Model */,
+				2B5420C927BA85F700E82EA7 /* View */,
+				2B5420B727BA7E8800E82EA7 /* OnboardingViewController.swift */,
+				2B27CE8827BA754900D7DA1B /* OnboardingViewController.storyboard */,
+			);
+			path = "Onbarding Screen";
+			sourceTree = "<group>";
+		};
+		2B5420B927BA7F8100E82EA7 /* Login Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */,
+				2B5420D927BC1EC300E82EA7 /* LoginViewController.storyboard */,
+			);
+			path = "Login Screen";
+			sourceTree = "<group>";
+		};
+		2B5420BA27BA7F9700E82EA7 /* Registration Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2B5420C327BA808900E82EA7 /* RegistrationViewController.swift */,
+				2B5420C527BA809300E82EA7 /* RegistrationViewController.storyboard */,
+			);
+			path = "Registration Screen";
+			sourceTree = "<group>";
+		};
+		2B5420BB27BA7FAC00E82EA7 /* Tab Bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B5420C727BA80BB00E82EA7 /* TabBarController.storyboard */,
+			);
+			path = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		2B5420BC27BA800000E82EA7 /* Search Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Search Screen";
+			sourceTree = "<group>";
+		};
+		2B5420BD27BA802400E82EA7 /* Favorites Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Favorites Screen";
+			sourceTree = "<group>";
+		};
+		2B5420BE27BA803C00E82EA7 /* Settings Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Settings Screen";
+			sourceTree = "<group>";
+		};
+		2B5420C927BA85F700E82EA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B5420CD27BA8C3600E82EA7 /* OnboardingCVCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B5420CA27BA85FB00E82EA7 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B5420CB27BA87AB00E82EA7 /* OnboardingDataSource.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		2B5420CD27BA8C3600E82EA7 /* OnboardingCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B5420CE27BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = OnboardingCVCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +328,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5420C827BA80BB00E82EA7 /* TabBarController.storyboard in Resources */,
 				2B27CE9227BA754A00D7DA1B /* LaunchScreen.storyboard in Resources */,
-				2B27CE8F27BA754A00D7DA1B /* Assets.xcassets in Resources */,
-				2B27CE8A27BA754900D7DA1B /* Main.storyboard in Resources */,
+				2B27CE8A27BA754900D7DA1B /* OnboardingViewController.storyboard in Resources */,
+				2B5420DA27BC1EC300E82EA7 /* LoginViewController.storyboard in Resources */,
+				2B5420D827BC02FA00E82EA7 /* Assets.xcassets in Resources */,
+				2B5420C627BA809300E82EA7 /* RegistrationViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +344,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B27CE8727BA754900D7DA1B /* ViewController.swift in Sources */,
+				2B5420DC27BC1ED400E82EA7 /* LoginViewController.swift in Sources */,
+				2B5420C427BA808900E82EA7 /* RegistrationViewController.swift in Sources */,
 				2B27CE8327BA754900D7DA1B /* AppDelegate.swift in Sources */,
+				2B5420B827BA7E8800E82EA7 /* OnboardingViewController.swift in Sources */,
+				2B5420D027BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift in Sources */,
+				2B5420CC27BA87AB00E82EA7 /* OnboardingDataSource.swift in Sources */,
 				2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */,
+				2B5420D427BA8CBC00E82EA7 /* OnboardingSlide.swift in Sources */,
 				2B27CE8D27BA754900D7DA1B /* CocktailsZone.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,12 +359,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2B27CE8827BA754900D7DA1B /* Main.storyboard */ = {
+		2B27CE8827BA754900D7DA1B /* OnboardingViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2B27CE8927BA754900D7DA1B /* Base */,
 			);
-			name = Main.storyboard;
+			name = OnboardingViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		2B27CE9027BA754A00D7DA1B /* LaunchScreen.storyboard */ = {
@@ -295,10 +503,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VQ3J389T7M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CocktailsZone/Info.plist;
+				INFOPLIST_FILE = "CocktailsZone/Supporting Files/Settings/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnboardingViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,10 +531,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VQ3J389T7M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CocktailsZone/Info.plist;
+				INFOPLIST_FILE = "CocktailsZone/Supporting Files/Settings/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnboardingViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
