@@ -8,22 +8,49 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var passwordIcon: UIImageView!
+    @IBOutlet weak var usernameIcon: UIImageView!
+    @IBOutlet weak var LoginLabel: UILabel!
+    
+    var error = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showError () {
+        let alert = UIAlertController.init(title: "Error", message: error, preferredStyle: .alert)
+        let okAction = UIAlertAction.init(title: "okay", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
-    */
+    
+    @IBAction func loginActionButton(_ sender: Any) {
+        guard let unwrapedUserName = usernameTextField.text else {
+            return
+        }
+        guard let unwrapedPassword = passwordTextField.text else {
+            return
+        }
+        
+//        if passwordTextField.text == UserDefault.getPasswordForThisUser(usernameTextField: unwrapedUserName) && !unwrapedPassword.isEmpty {
+//            let sb = UIStoryboard(name: "TabBarController", bundle: nil)
+//            let vc = sb.instantiateViewController(withIdentifier: "TabBarController")
+//            navigationController?.setViewControllers([vc], animated: true)
+//        }
+//        else {
+//            error = "Error"
+//            showError()
+//        }
+    }
+    
 
 }
