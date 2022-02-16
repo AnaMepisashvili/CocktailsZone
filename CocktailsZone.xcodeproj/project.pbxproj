@@ -22,6 +22,7 @@
 		2B5420D827BC02FA00E82EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420D727BC02FA00E82EA7 /* Assets.xcassets */; };
 		2B5420DA27BC1EC300E82EA7 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420D927BC1EC300E82EA7 /* LoginViewController.storyboard */; };
 		2B5420DC27BC1ED400E82EA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */; };
+		2B949FF027BD18EA001FFB18 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B949FEF27BD18EA001FFB18 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2B5420D727BC02FA00E82EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B5420D927BC1EC300E82EA7 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2B949FEF27BD18EA001FFB18 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		2B27CE9D27BA767000D7DA1B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2B949FEE27BD18C7001FFB18 /* Managers */,
 				2B27CE9C27BA762600D7DA1B /* Extemsions */,
 				2B27CEA327BA76F400D7DA1B /* Network Layer */,
 				2B27CEA427BA770B00D7DA1B /* CoreData */,
@@ -270,6 +273,14 @@
 			path = OnboardingCVCell;
 			sourceTree = "<group>";
 		};
+		2B949FEE27BD18C7001FFB18 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2B949FEF27BD18EA001FFB18 /* UserManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +358,7 @@
 				2B5420DC27BC1ED400E82EA7 /* LoginViewController.swift in Sources */,
 				2B5420C427BA808900E82EA7 /* RegistrationViewController.swift in Sources */,
 				2B27CE8327BA754900D7DA1B /* AppDelegate.swift in Sources */,
+				2B949FF027BD18EA001FFB18 /* UserManager.swift in Sources */,
 				2B5420B827BA7E8800E82EA7 /* OnboardingViewController.swift in Sources */,
 				2B5420D027BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift in Sources */,
 				2B5420CC27BA87AB00E82EA7 /* OnboardingDataSource.swift in Sources */,

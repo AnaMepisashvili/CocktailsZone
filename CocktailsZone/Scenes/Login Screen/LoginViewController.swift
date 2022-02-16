@@ -41,15 +41,15 @@ class LoginViewController: UIViewController {
             return
         }
         
-//        if passwordTextField.text == UserDefault.getPasswordForThisUser(usernameTextField: unwrapedUserName) && !unwrapedPassword.isEmpty {
-//            let sb = UIStoryboard(name: "TabBarController", bundle: nil)
-//            let vc = sb.instantiateViewController(withIdentifier: "TabBarController")
-//            navigationController?.setViewControllers([vc], animated: true)
-//        }
-//        else {
-//            error = "Error"
-//            showError()
-//        }
+        if passwordTextField.text == UserDefault.getPasswordForThisUser(usernameTextField: unwrapedUserName) && !unwrapedPassword.isEmpty {
+            let sb = UIStoryboard(name: "TabBarController", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "TabBarController")
+            navigationController?.setViewControllers([vc], animated: true)
+        }
+        else {
+            error = "Error"
+            showError()
+        }
     }
     
 
