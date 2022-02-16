@@ -29,10 +29,6 @@ class OnboardingViewController: UIViewController {
         }
     }
     
-    func configViewModel() {
-        dataSource = OnboardingDataSource(with: collectionView, with: slides, with: self)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         slides = [
@@ -43,17 +39,34 @@ class OnboardingViewController: UIViewController {
         configViewModel()
     }
     
+    func configViewModel() {
+        dataSource = OnboardingDataSource(with: collectionView, with: slides, with: self)
+    }
+    
+    func moveToLoginScreen() {
+        let sb = UIStoryboard(name: "LoginViewController", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        let width = scrollView.frame.width
+//        currentPage = Int(scrollView.contentOffset.x/width)
+//        pageControl.currentPage = currentPage
+//    }
+    
+    
     @IBAction func nextButtonClicked(_ sender: Any) {
         if currentPage == slides.count - 1 {
-            
-            guard let vc = UIStoryboard(name: "LoginViewController", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-
+            moveToLoginScreen()
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
+    }
+    
+    @IBAction func skipActionButton(_ sender: Any) {
+        moveToLoginScreen()
     }
 }

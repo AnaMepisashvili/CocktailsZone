@@ -21,9 +21,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationController?.setNavigationBarHidden(true, animated: true)
-        
     }
     
     func showError () {
@@ -40,11 +38,10 @@ class LoginViewController: UIViewController {
         guard let unwrapedPassword = passwordTextField.text else {
             return
         }
-        
         if passwordTextField.text == UserDefault.getPasswordForThisUser(usernameTextField: unwrapedUserName) && !unwrapedPassword.isEmpty {
             let sb = UIStoryboard(name: "TabBarController", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "TabBarController")
-            navigationController?.setViewControllers([vc], animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
         else {
             error = "Error"
@@ -52,5 +49,10 @@ class LoginViewController: UIViewController {
         }
     }
     
-
+    @IBAction func registerActionButton(_ sender: Any) {
+        let sb = UIStoryboard(name: "RegistrationViewController", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
