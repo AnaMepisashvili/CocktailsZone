@@ -18,8 +18,8 @@ class CocktailsInfoApi: CocktailServiceProtocol {
             count += 1
         }
         
-//        let url = "https://api.github.com/users?since=\(count)"
-        let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=\(count)"
+        let url = "https://api.github.com/users?since=\(count)"
+//        let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=\(count)"
         
         NetworkManager.shared.get(url: url) { (result: Result<[Cocktails], Error>) in
             switch result {
