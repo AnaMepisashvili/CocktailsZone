@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="-1574" y="-127"/>
         </scene>
-        <!--SearchViewController-->
+        <!--MenuViewController-->
         <scene sceneID="I34-db-fUQ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SearchViewController" storyboardName="SearchViewController" id="DqT-uH-43H" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MenuViewController" storyboardName="MenuViewController" id="DqT-uH-43H" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="PXu-py-IAN"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPd-Ws-Opd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

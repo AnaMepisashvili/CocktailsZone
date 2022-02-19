@@ -38,6 +38,10 @@
 		2B94A00D27BD4D16001FFB18 /* SearchScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A00C27BD4D16001FFB18 /* SearchScreenDataSource.swift */; };
 		2B94A01227BD5644001FFB18 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01127BD5644001FFB18 /* UITableViewCell+Extensions.swift */; };
 		2B94A01427BD566A001FFB18 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01327BD566A001FFB18 /* UITableView+Extensions.swift */; };
+		2B94A01D27C11548001FFB18 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01C27C11548001FFB18 /* MenuViewController.swift */; };
+		2B94A01F27C11552001FFB18 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A01E27C11552001FFB18 /* MenuViewController.storyboard */; };
+		2B94A02127C11775001FFB18 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02027C11775001FFB18 /* FilterViewController.swift */; };
+		2B94A02327C1177F001FFB18 /* FilterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02227C1177F001FFB18 /* FilterViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +78,10 @@
 		2B94A00C27BD4D16001FFB18 /* SearchScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenDataSource.swift; sourceTree = "<group>"; };
 		2B94A01127BD5644001FFB18 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		2B94A01327BD566A001FFB18 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		2B94A01C27C11548001FFB18 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2B94A01E27C11552001FFB18 /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
+		2B94A02027C11775001FFB18 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		2B94A02227C1177F001FFB18 /* FilterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,8 +273,9 @@
 		2B5420BC27BA800000E82EA7 /* Search Screen */ = {
 			isa = PBXGroup;
 			children = (
-				2B949FFD27BD4A27001FFB18 /* View Model */,
-				2B949FFE27BD4A3B001FFB18 /* View */,
+				2B94A01927C11459001FFB18 /* Menu  */,
+				2B94A01A27C11468001FFB18 /* Search All Cocktail  */,
+				2B94A01B27C114B0001FFB18 /* Filter */,
 			);
 			path = "Search Screen";
 			sourceTree = "<group>";
@@ -358,6 +367,33 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		2B94A01927C11459001FFB18 /* Menu  */ = {
+			isa = PBXGroup;
+			children = (
+				2B94A01C27C11548001FFB18 /* MenuViewController.swift */,
+				2B94A01E27C11552001FFB18 /* MenuViewController.storyboard */,
+			);
+			path = "Menu ";
+			sourceTree = "<group>";
+		};
+		2B94A01A27C11468001FFB18 /* Search All Cocktail  */ = {
+			isa = PBXGroup;
+			children = (
+				2B949FFD27BD4A27001FFB18 /* View Model */,
+				2B949FFE27BD4A3B001FFB18 /* View */,
+			);
+			path = "Search All Cocktail ";
+			sourceTree = "<group>";
+		};
+		2B94A01B27C114B0001FFB18 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				2B94A02027C11775001FFB18 /* FilterViewController.swift */,
+				2B94A02227C1177F001FFB18 /* FilterViewController.storyboard */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -418,10 +454,12 @@
 			files = (
 				2B5420C827BA80BB00E82EA7 /* TabBarController.storyboard in Resources */,
 				2B94A00927BD4C9F001FFB18 /* CoctailTableViewCell.xib in Resources */,
+				2B94A01F27C11552001FFB18 /* MenuViewController.storyboard in Resources */,
 				2B27CE9227BA754A00D7DA1B /* LaunchScreen.storyboard in Resources */,
 				2B27CE8A27BA754900D7DA1B /* OnboardingViewController.storyboard in Resources */,
 				2B949FF427BD44D5001FFB18 /* SearchViewController.storyboard in Resources */,
 				2B5420DA27BC1EC300E82EA7 /* LoginViewController.storyboard in Resources */,
+				2B94A02327C1177F001FFB18 /* FilterViewController.storyboard in Resources */,
 				2B5420D827BC02FA00E82EA7 /* Assets.xcassets in Resources */,
 				2B5420C627BA809300E82EA7 /* RegistrationViewController.storyboard in Resources */,
 				2B949FFC27BD466C001FFB18 /* SettingsViewController.storyboard in Resources */,
@@ -443,6 +481,7 @@
 				2B94A00B27BD4CF2001FFB18 /* SearchScreenViewModel.swift in Sources */,
 				2B94A00427BD4C10001FFB18 /* NetworkManager.swift in Sources */,
 				2B27CE8327BA754900D7DA1B /* AppDelegate.swift in Sources */,
+				2B94A02127C11775001FFB18 /* FilterViewController.swift in Sources */,
 				2B949FF027BD18EA001FFB18 /* UserManager.swift in Sources */,
 				2B5420B827BA7E8800E82EA7 /* OnboardingViewController.swift in Sources */,
 				2B5420D027BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift in Sources */,
@@ -451,6 +490,7 @@
 				2B5420CC27BA87AB00E82EA7 /* OnboardingDataSource.swift in Sources */,
 				2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */,
 				2B5420D427BA8CBC00E82EA7 /* OnboardingSlide.swift in Sources */,
+				2B94A01D27C11548001FFB18 /* MenuViewController.swift in Sources */,
 				2B94A01427BD566A001FFB18 /* UITableView+Extensions.swift in Sources */,
 				2B949FFA27BD4660001FFB18 /* SettingsViewController.swift in Sources */,
 				2B949FF627BD45BE001FFB18 /* FavoritesViewController.swift in Sources */,

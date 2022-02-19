@@ -37,5 +37,3 @@ class CocktailsInfoApi: CocktailServiceProtocol {
     private var count = 0
     
 }
-
-

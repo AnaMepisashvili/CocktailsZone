@@ -18,7 +18,10 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        self.usernameTextField.delegate = self
+//        self.mobileNumberTextField.delegate = self
+//        self.emailTextField.delegate = self
+//        self.passwordTextField.delegate = self
     }
     
     @IBAction func registrationActionButton(_ sender: Any) {
@@ -53,3 +56,16 @@ class RegistrationViewController: UIViewController {
     }
 
 }
+
+//extension LoginViewController: UITextFieldDelegate {
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        let nextTag = textField.tag + 1
+//
+//        if let nextResponder = textField.superview?.viewWithTag(nextTag) {
+//            nextResponder.becomeFirstResponder()
+//        } else {
+//            textField.resignFirstResponder()
+//        }
+//        return true
+//    }
+//}

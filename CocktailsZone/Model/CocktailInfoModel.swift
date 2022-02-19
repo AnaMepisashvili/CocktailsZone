@@ -12,4 +12,12 @@ struct Cocktails: Codable {
     let instructions: String?
     let category: String?
     let avatarUrl: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "title"
+        case instructions = "text"
+        case category = ""
+        case avatarUrl = "image_url"
+    }
 }
+

@@ -61,16 +61,12 @@ class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    // for press return key
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        passwordTextField.resignFirstResponder()
-//        return (true)
-//    }
 }
+
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let nextTag = textField.tag + 1
-
+        
         if let nextResponder = textField.superview?.viewWithTag(nextTag) {
             nextResponder.becomeFirstResponder()
         } else {
