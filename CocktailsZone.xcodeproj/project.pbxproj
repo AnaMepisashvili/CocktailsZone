@@ -42,6 +42,8 @@
 		2B94A01F27C11552001FFB18 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A01E27C11552001FFB18 /* MenuViewController.storyboard */; };
 		2B94A02127C11775001FFB18 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02027C11775001FFB18 /* FilterViewController.swift */; };
 		2B94A02327C1177F001FFB18 /* FilterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02227C1177F001FFB18 /* FilterViewController.storyboard */; };
+		2B94A02927C11DC6001FFB18 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02727C11DC6001FFB18 /* FilterTableViewCell.swift */; };
+		2B94A02A27C11DC6001FFB18 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02827C11DC6001FFB18 /* FilterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		2B94A01E27C11552001FFB18 /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
 		2B94A02027C11775001FFB18 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		2B94A02227C1177F001FFB18 /* FilterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterViewController.storyboard; sourceTree = "<group>"; };
+		2B94A02727C11DC6001FFB18 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		2B94A02827C11DC6001FFB18 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				2B27CEA227BA76C800D7DA1B /* Launch Screen */,
-				2B5420B627BA7CFC00E82EA7 /* Onbarding Screen */,
+				2B5420B627BA7CFC00E82EA7 /* Onboarding Screen */,
 				2B5420B927BA7F8100E82EA7 /* Login Screen */,
 				2B5420BA27BA7F9700E82EA7 /* Registration Screen */,
 				2B5420BB27BA7FAC00E82EA7 /* Tab Bar Controller */,
@@ -235,13 +239,13 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		2B5420B627BA7CFC00E82EA7 /* Onbarding Screen */ = {
+		2B5420B627BA7CFC00E82EA7 /* Onboarding Screen */ = {
 			isa = PBXGroup;
 			children = (
 				2B5420CA27BA85FB00E82EA7 /* View Model */,
 				2B5420C927BA85F700E82EA7 /* View */,
 			);
-			path = "Onbarding Screen";
+			path = "Onboarding Screen";
 			sourceTree = "<group>";
 		};
 		2B5420B927BA7F8100E82EA7 /* Login Screen */ = {
@@ -388,10 +392,20 @@
 		2B94A01B27C114B0001FFB18 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				2B94A02427C11D8D001FFB18 /* FilterTableViewCell */,
 				2B94A02027C11775001FFB18 /* FilterViewController.swift */,
 				2B94A02227C1177F001FFB18 /* FilterViewController.storyboard */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		2B94A02427C11D8D001FFB18 /* FilterTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B94A02727C11DC6001FFB18 /* FilterTableViewCell.swift */,
+				2B94A02827C11DC6001FFB18 /* FilterTableViewCell.xib */,
+			);
+			path = FilterTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +469,7 @@
 				2B5420C827BA80BB00E82EA7 /* TabBarController.storyboard in Resources */,
 				2B94A00927BD4C9F001FFB18 /* CoctailTableViewCell.xib in Resources */,
 				2B94A01F27C11552001FFB18 /* MenuViewController.storyboard in Resources */,
+				2B94A02A27C11DC6001FFB18 /* FilterTableViewCell.xib in Resources */,
 				2B27CE9227BA754A00D7DA1B /* LaunchScreen.storyboard in Resources */,
 				2B27CE8A27BA754900D7DA1B /* OnboardingViewController.storyboard in Resources */,
 				2B949FF427BD44D5001FFB18 /* SearchViewController.storyboard in Resources */,
@@ -495,6 +510,7 @@
 				2B949FFA27BD4660001FFB18 /* SettingsViewController.swift in Sources */,
 				2B949FF627BD45BE001FFB18 /* FavoritesViewController.swift in Sources */,
 				2B94A00827BD4C9F001FFB18 /* CoctailTableViewCell.swift in Sources */,
+				2B94A02927C11DC6001FFB18 /* FilterTableViewCell.swift in Sources */,
 				2B94A01227BD5644001FFB18 /* UITableViewCell+Extensions.swift in Sources */,
 				2B27CE8D27BA754900D7DA1B /* CocktailsZone.xcdatamodeld in Sources */,
 			);

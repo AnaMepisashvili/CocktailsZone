@@ -52,16 +52,20 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0x-l2-hwY">
-                                <rect key="frame" x="20" y="771" width="374" height="31"/>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="N0x-l2-hwY">
+                                <rect key="frame" x="135" y="771" width="144" height="31"/>
+                                <color key="backgroundColor" red="0.62745098039215685" green="0.70980392156862748" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaX-oN-GZT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydX-Zc-mwf">
-                                <rect key="frame" x="317" y="118" width="52" height="31"/>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="ydX-Zc-mwf">
+                                <rect key="frame" x="328.5" y="80" width="53.5" height="31"/>
+                                <color key="backgroundColor" red="0.62745098039215685" green="0.70980392156862748" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Skip"/>
                                 <connections>
@@ -71,20 +75,21 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Klo-Ka-O4z">
                                 <rect key="frame" x="20" y="710" width="374" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="secondarySystemBackgroundColor"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.62745098039215685" green="0.70980392156862748" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="N0x-l2-hwY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1ab-T9-V0b"/>
+                            <constraint firstItem="N0x-l2-hwY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="1ab-T9-V0b"/>
                             <constraint firstAttribute="trailing" secondItem="pae-3l-oUX" secondAttribute="trailing" id="1yg-lh-dxC"/>
                             <constraint firstAttribute="bottom" secondItem="pae-3l-oUX" secondAttribute="bottom" id="81f-yp-sxd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ydX-Zc-mwf" secondAttribute="trailing" constant="45" id="9Z1-Xk-9WM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ydX-Zc-mwf" secondAttribute="trailing" constant="32" id="9Z1-Xk-9WM"/>
+                            <constraint firstItem="ydX-Zc-mwf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-8" id="Dpw-IE-5V7"/>
                             <constraint firstItem="pae-3l-oUX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-44" id="IO1-eH-WQa"/>
-                            <constraint firstItem="ydX-Zc-mwf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Qnk-cG-2h3"/>
+                            <constraint firstItem="ydX-Zc-mwf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-8" id="Qnk-cG-2h3"/>
                             <constraint firstItem="pae-3l-oUX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VoX-UQ-ZZP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N0x-l2-hwY" secondAttribute="trailing" constant="20" id="e6p-z6-4vm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N0x-l2-hwY" secondAttribute="trailing" constant="135" id="e6p-z6-4vm"/>
                             <constraint firstItem="Klo-Ka-O4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eAI-Vy-Y86"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N0x-l2-hwY" secondAttribute="bottom" constant="60" id="lN1-SO-O7h"/>
                             <constraint firstItem="ydX-Zc-mwf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="rd4-lH-pjy"/>
