@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: BaseViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var mobileNumberTextField: UITextField!
@@ -18,10 +18,10 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.usernameTextField.delegate = self
-//        self.mobileNumberTextField.delegate = self
-//        self.emailTextField.delegate = self
-//        self.passwordTextField.delegate = self
+        self.usernameTextField.delegate = self
+        self.mobileNumberTextField.delegate = self
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     @IBAction func registrationActionButton(_ sender: Any) {
@@ -53,6 +53,11 @@ class RegistrationViewController: UIViewController {
         let Action = UIAlertAction.init(title: "OK", style: .default, handler: nil)
         alert.addAction(Action)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    // for hide keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
 }

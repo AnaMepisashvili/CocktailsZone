@@ -23,8 +23,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <segments>
-                                        <segment title="Alcoholic"/>
-                                        <segment title="Non-Alcoholic"/>
+                                        <segment title="Alcohol"/>
+                                        <segment title="Non-Alcohol"/>
                                     </segments>
                                 </segmentedControl>
                             </tableView>

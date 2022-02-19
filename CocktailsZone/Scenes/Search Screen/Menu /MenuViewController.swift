@@ -17,6 +17,7 @@ class MenuViewController: UIViewController {
     
     @IBAction func searchCoctailByName(_ sender: Any) {
         let sb = UIStoryboard(name: "SearchViewController", bundle: nil)
+        self.tabBarController?.tabBar.isHidden = false
         let vc = sb.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -41,23 +41,6 @@ class OnboardingViewController: UIViewController {
         configViewModel()
     }
     
-    func configViewModel() {
-        dataSource = OnboardingDataSource(with: collectionView, with: slides, with: self)
-    }
-    
-    func moveToLoginScreen() {
-        let sb = UIStoryboard(name: "LoginViewController", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        let width = scrollView.frame.width
-//        currentPage = Int(scrollView.contentOffset.x/width)
-//        pageControl.currentPage = currentPage
-//    }
-    
-    
     @IBAction func nextButtonClicked(_ sender: Any) {
         if currentPage == slides.count - 1 {
             moveToLoginScreen()
@@ -71,4 +54,17 @@ class OnboardingViewController: UIViewController {
     @IBAction func skipActionButton(_ sender: Any) {
         moveToLoginScreen()
     }
+    
+    func configViewModel() {
+        dataSource = OnboardingDataSource(with: collectionView, with: slides, with: self)
+    }
+    
+    func moveToLoginScreen() {
+        let sb = UIStoryboard(name: "LoginViewController", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
+
+

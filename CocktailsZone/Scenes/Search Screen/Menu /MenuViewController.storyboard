@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" red="0.59607843140000005" green="0.83137254900000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Filter by Alcoholic"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Filter by Alcohol"/>
                                 <connections>
                                     <action selector="filterByAlcoholic:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W5W-7e-xca"/>
                                 </connections>
