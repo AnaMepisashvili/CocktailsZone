@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filter View Controller-->
+        <!--Filter-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="FilterViewController" id="Y6W-OH-hqX" customClass="FilterViewController" customModule="CocktailsZone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="FilterViewController" customModule="CocktailsZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,10 +38,14 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="N6U-tF-1C9" secondAttribute="bottom" id="k04-f6-0MY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Filter" id="QSd-Eo-UA0"/>
+                    <connections>
+                        <outlet property="tableView" destination="N6U-tF-1C9" id="qJ2-zz-4Xd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="92"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="91.741071428571431"/>
         </scene>
     </scenes>
     <resources>

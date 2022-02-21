@@ -102,13 +102,14 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="CQt-ZQ-v0X"/>
                     <connections>
                         <outlet property="emailTextField" destination="zgM-nG-oyM" id="tVY-3N-Xoa"/>
                         <outlet property="mobileNumberTextField" destination="Ix9-j0-psh" id="z2x-cc-pS8"/>
                         <outlet property="passwordTextField" destination="ppm-7J-TOk" id="6x3-Vn-foJ"/>
+                        <outlet property="registrationButton" destination="Dlt-0n-TuB" id="8DV-IS-VO2"/>
                         <outlet property="usernameTextField" destination="7C9-Vm-xNq" id="KjF-iR-MiE"/>
                     </connections>
                 </viewController>

@@ -32,6 +32,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" id="wKk-UZ-IV1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="NE6-Jy-GQ9" id="mCH-8c-BbP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

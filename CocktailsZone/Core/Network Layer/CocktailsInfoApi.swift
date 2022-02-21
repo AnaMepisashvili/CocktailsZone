@@ -11,15 +11,17 @@ protocol CocktailServiceProtocol: AnyObject {
     func getCocktails(pagination: Bool, completion: @escaping ([Cocktails]) -> Void)
 }
 
-
 class CocktailsInfoApi: CocktailServiceProtocol {
+
+    private var count = 0
+    
     func getCocktails(pagination: Bool, completion: @escaping ([Cocktails]) -> Void) {
+        
         if pagination {
             count += 1
         }
         
-        let url = "https://api.github.com/users?since=\(count)"
-//        let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=\(count)"
+        let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=\(count)"
         
         NetworkManager.shared.get(url: url) { (result: Result<[Cocktails], Error>) in
             switch result {
@@ -33,7 +35,5 @@ class CocktailsInfoApi: CocktailServiceProtocol {
             }
         }
     }
-    
-    private var count = 0
     
 }

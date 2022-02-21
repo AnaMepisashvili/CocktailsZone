@@ -9,10 +9,13 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet weak var searchCoctailByNameButton: UIButton!
+    @IBOutlet weak var filterByAlcoholicButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        searchCoctailByNameButton.layer.cornerRadius = 15
+        filterByAlcoholicButton.layer.cornerRadius = 15
     }
     
     @IBAction func searchCoctailByName(_ sender: Any) {

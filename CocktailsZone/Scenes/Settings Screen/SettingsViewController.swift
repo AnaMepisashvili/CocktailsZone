@@ -9,10 +9,13 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var logOutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        logOutButton.layer.cornerRadius = 15
+        profileImageView.layer.cornerRadius = profileImageView.bounds.width/2
     }
     
     @IBAction func LogOut(_ sender: Any) {

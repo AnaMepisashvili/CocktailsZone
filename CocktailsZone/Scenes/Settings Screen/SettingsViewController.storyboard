@@ -63,6 +63,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="AQe-hw-jRk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="logOutButton" destination="HHK-xa-n8d" id="l96-wc-18E"/>
+                        <outlet property="profileImageView" destination="9ms-I2-dgj" id="YQY-wN-sHY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

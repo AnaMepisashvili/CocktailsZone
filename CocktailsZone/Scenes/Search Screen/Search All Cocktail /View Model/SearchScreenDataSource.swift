@@ -70,11 +70,6 @@ class HomeTableDataSource: NSObject, TableDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(CoctailTableViewCell.self, for: indexPath)
-//        if (indexPath.row + 1) % 4 == 0 {
-//            cell.configure(with: itemList[indexPath.row], isFourth: true)
-//        } else {
-//            cell.configure(with: itemList[indexPath.row], isFourth: false)
-//        }
         return cell
         
     }

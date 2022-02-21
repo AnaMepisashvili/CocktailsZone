@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,49 +16,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFv-UX-L4x">
-                                <rect key="frame" x="41" y="379" width="333" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.59607843140000005" green="0.83137254900000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Filter by Alcohol"/>
-                                <connections>
-                                    <action selector="filterByAlcoholic:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W5W-7e-xca"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vm-1j-e1s">
-                                <rect key="frame" x="41" y="290" width="333" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.59607843140000005" green="0.83137254900000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Search Coctail by Name"/>
-                                <connections>
-                                    <action selector="searchCoctailByName:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eG1-Q0-NMj"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a category " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA1-gx-7LT">
-                                <rect key="frame" x="115" y="175" width="185" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA1-gx-7LT">
+                                <rect key="frame" x="20" y="174" width="374" height="40"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Choose a category">
+                                        <attributes>
+                                            <font key="NSFont" size="29" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange juice " translatesAutoresizingMaskIntoConstraints="NO" id="rDc-4C-1mu">
-                                <rect key="frame" x="115" y="444" width="325" height="297"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="80J-Io-r9w">
+                                <rect key="frame" x="60" y="291" width="294" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vm-1j-e1s">
+                                        <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="125"/>
+                                        <color key="backgroundColor" red="0.59607843140000005" green="0.83137254900000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Coctail by  Name">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="searchCoctailByName:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eG1-Q0-NMj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFv-UX-L4x">
+                                        <rect key="frame" x="154.66666666666663" y="0.0" width="139.33333333333337" height="125"/>
+                                        <color key="backgroundColor" red="0.59607843140000005" green="0.83137254900000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Filter by Alcohol">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="filterByAlcoholic:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W5W-7e-xca"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="KFl-9H-xsa"/>
+                                    <constraint firstAttribute="width" constant="294" id="Vhp-Q1-1Sa"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orange juice " translatesAutoresizingMaskIntoConstraints="NO" id="hJw-ea-3gi">
+                                <rect key="frame" x="108" y="454" width="327" height="334"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="334" id="G2S-Hb-YiL"/>
+                                    <constraint firstAttribute="width" constant="327" id="xiw-SN-XET"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uA1-gx-7LT" secondAttribute="trailing" constant="20" id="5f2-nT-FWq"/>
+                            <constraint firstItem="80J-Io-r9w" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="9mT-xD-Ud1"/>
+                            <constraint firstItem="hJw-ea-3gi" firstAttribute="top" secondItem="80J-Io-r9w" secondAttribute="bottom" constant="38" id="Cwp-nT-QtA"/>
+                            <constraint firstItem="uA1-gx-7LT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="VM9-hA-b9G"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hJw-ea-3gi" secondAttribute="bottom" constant="25" id="X9m-nF-1Qa"/>
+                            <constraint firstItem="uA1-gx-7LT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="130" id="a2c-qR-uo8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="80J-Io-r9w" secondAttribute="trailing" constant="60" id="jPW-LQ-ChM"/>
+                            <constraint firstItem="80J-Io-r9w" firstAttribute="top" secondItem="uA1-gx-7LT" secondAttribute="bottom" constant="77" id="lf5-Te-4L2"/>
+                            <constraint firstAttribute="trailing" secondItem="hJw-ea-3gi" secondAttribute="trailing" constant="-21" id="piO-KB-Bdq"/>
+                            <constraint firstItem="hJw-ea-3gi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="108" id="shZ-Yh-YBY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="Ufl-o2-7WO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="filterByAlcoholicButton" destination="vFv-UX-L4x" id="8Uz-68-2ZD"/>
+                        <outlet property="searchCoctailByNameButton" destination="8Vm-1j-e1s" id="T6T-pl-UUz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+            <point key="canvasLocation" x="136.23188405797103" y="91.071428571428569"/>
         </scene>
     </scenes>
     <resources>

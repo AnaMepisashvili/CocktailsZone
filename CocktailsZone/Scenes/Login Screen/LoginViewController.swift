@@ -22,6 +22,7 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
+        loginButton.layer.cornerRadius = 15
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
     }

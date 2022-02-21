@@ -45,6 +45,10 @@
 		2B94A02927C11DC6001FFB18 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02727C11DC6001FFB18 /* FilterTableViewCell.swift */; };
 		2B94A02A27C11DC6001FFB18 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02827C11DC6001FFB18 /* FilterTableViewCell.xib */; };
 		2B94A02C27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02B27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift */; };
+		2B94A03027C1402B001FFB18 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02E27C1402B001FFB18 /* FavoritesTableViewCell.swift */; };
+		2B94A03127C1402B001FFB18 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */; };
+		2B94A03627C14267001FFB18 /* CoctailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */; };
+		2B94A03827C1426F001FFB18 /* CoctailInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A03727C1426F001FFB18 /* CoctailInfoViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +69,7 @@
 		2B5420D727BC02FA00E82EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B5420D927BC1EC300E82EA7 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2B79287727C3C13F00998B7A /* FiraMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraMono-Regular.ttf"; sourceTree = "<group>"; };
 		2B949FEF27BD18EA001FFB18 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		2B949FF127BD44BE001FFB18 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B949FF327BD44D5001FFB18 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
@@ -88,6 +93,10 @@
 		2B94A02727C11DC6001FFB18 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		2B94A02827C11DC6001FFB18 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
 		2B94A02B27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldShouldReturn+Extensions.swift"; sourceTree = "<group>"; };
+		2B94A02E27C1402B001FFB18 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
+		2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailInfoViewController.swift; sourceTree = "<group>"; };
+		2B94A03727C1426F001FFB18 /* CoctailInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoctailInfoViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +151,7 @@
 		2B27CE9A27BA760500D7DA1B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2B79287627C3C13000998B7A /* Fonts */,
 				2B27CE9B27BA761B00D7DA1B /* Image */,
 			);
 			path = Resources;
@@ -290,6 +300,7 @@
 		2B5420BD27BA802400E82EA7 /* Favorites Screen */ = {
 			isa = PBXGroup;
 			children = (
+				2B94A02D27C14013001FFB18 /* FavoritesTableViewCell */,
 				2B949FF527BD45BE001FFB18 /* FavoritesViewController.swift */,
 				2B949FF727BD45CB001FFB18 /* FavoritesViewController.storyboard */,
 			);
@@ -329,6 +340,14 @@
 				2B5420CE27BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift */,
 			);
 			path = OnboardingCVCell;
+			sourceTree = "<group>";
+		};
+		2B79287627C3C13000998B7A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2B79287727C3C13F00998B7A /* FiraMono-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		2B949FEE27BD18C7001FFB18 /* Managers */ = {
@@ -386,6 +405,7 @@
 		2B94A01A27C11468001FFB18 /* Search All Cocktail  */ = {
 			isa = PBXGroup;
 			children = (
+				2B94A03327C14225001FFB18 /* Coctail Info Screen */,
 				2B949FFD27BD4A27001FFB18 /* View Model */,
 				2B949FFE27BD4A3B001FFB18 /* View */,
 			);
@@ -409,6 +429,24 @@
 				2B94A02827C11DC6001FFB18 /* FilterTableViewCell.xib */,
 			);
 			path = FilterTableViewCell;
+			sourceTree = "<group>";
+		};
+		2B94A02D27C14013001FFB18 /* FavoritesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B94A02E27C1402B001FFB18 /* FavoritesTableViewCell.swift */,
+				2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */,
+			);
+			path = FavoritesTableViewCell;
+			sourceTree = "<group>";
+		};
+		2B94A03327C14225001FFB18 /* Coctail Info Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */,
+				2B94A03727C1426F001FFB18 /* CoctailInfoViewController.storyboard */,
+			);
+			path = "Coctail Info Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +509,7 @@
 			files = (
 				2B5420C827BA80BB00E82EA7 /* TabBarController.storyboard in Resources */,
 				2B94A00927BD4C9F001FFB18 /* CoctailTableViewCell.xib in Resources */,
+				2B94A03827C1426F001FFB18 /* CoctailInfoViewController.storyboard in Resources */,
 				2B94A01F27C11552001FFB18 /* MenuViewController.storyboard in Resources */,
 				2B94A02A27C11DC6001FFB18 /* FilterTableViewCell.xib in Resources */,
 				2B27CE9227BA754A00D7DA1B /* LaunchScreen.storyboard in Resources */,
@@ -482,6 +521,7 @@
 				2B5420C627BA809300E82EA7 /* RegistrationViewController.storyboard in Resources */,
 				2B949FFC27BD466C001FFB18 /* SettingsViewController.storyboard in Resources */,
 				2B949FF827BD45CB001FFB18 /* FavoritesViewController.storyboard in Resources */,
+				2B94A03127C1402B001FFB18 /* FavoritesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,11 +541,13 @@
 				2B27CE8327BA754900D7DA1B /* AppDelegate.swift in Sources */,
 				2B94A02127C11775001FFB18 /* FilterViewController.swift in Sources */,
 				2B949FF027BD18EA001FFB18 /* UserManager.swift in Sources */,
+				2B94A03027C1402B001FFB18 /* FavoritesTableViewCell.swift in Sources */,
 				2B5420B827BA7E8800E82EA7 /* OnboardingViewController.swift in Sources */,
 				2B5420D027BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift in Sources */,
 				2B94A00027BD4B06001FFB18 /* CocktailsInfoApi.swift in Sources */,
 				2B94A02C27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift in Sources */,
 				2B94A00D27BD4D16001FFB18 /* SearchScreenDataSource.swift in Sources */,
+				2B94A03627C14267001FFB18 /* CoctailInfoViewController.swift in Sources */,
 				2B5420CC27BA87AB00E82EA7 /* OnboardingDataSource.swift in Sources */,
 				2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */,
 				2B5420D427BA8CBC00E82EA7 /* OnboardingSlide.swift in Sources */,

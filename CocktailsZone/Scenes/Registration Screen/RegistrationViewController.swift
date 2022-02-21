@@ -14,10 +14,13 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var registrationButton: UIButton!
+    
     var error = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registrationButton.layer.cornerRadius = 15
         self.usernameTextField.delegate = self
         self.mobileNumberTextField.delegate = self
         self.emailTextField.delegate = self
