@@ -1,0 +1,60 @@
+import UIKit
+
+class OnboardingViewController: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var skipButton: UIButton!
+    
+    private var ViewModel: OnboardingViewModel!
+    
+    var slides: [OnboardingSlide] = []
+    
+    var currentPage = 0 {
+        didSet {
+            pageControl.currentPage = currentPage
+            if currentPage == slides.count - 1 {
+                nextButton.setTitle("Get Started", for: .normal)
+            } else {
+                nextButton.setTitle("Next", for: .normal)
+            }
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        skipButton.layer.cornerRadius = 15
+        nextButton.layer.cornerRadius = 15
+        
+        slides = [
+            OnboardingSlide(image: "FirstSlide"),
+            OnboardingSlide(image: "SecondSlide"),
+            OnboardingSlide(image: "ThirdSlide")
+        ]
+        configureViewModel()
+    }
+    
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        if currentPage == slides.count - 1 {
+            moveToLoginScreen()
+        } else {
+            currentPage += 1
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
+    }
+    
+    @IBAction func skipActionButton(_ sender: Any) {
+        moveToLoginScreen()
+    }
+    
+    func configureViewModel() {
+        ViewModel = OnboardingViewModel(with: collectionView, slides: slides, rootController: self)
+    }
+    
+    func moveToLoginScreen() {
+        let sb = UIStoryboard(name: "Login", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}

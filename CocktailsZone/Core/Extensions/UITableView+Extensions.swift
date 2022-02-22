@@ -1,10 +1,3 @@
-//
-//  UITableView+Extensions.swift
-//  CocktailsZone
-//
-//  Created by Ana Mepisashvili on 16.02.22.
-//
-
 import UIKit
 
 extension UITableView {

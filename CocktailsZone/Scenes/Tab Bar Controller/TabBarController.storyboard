@@ -30,30 +30,30 @@
             </objects>
             <point key="canvasLocation" x="-1574" y="-127"/>
         </scene>
-        <!--MenuViewController-->
+        <!--Menu-->
         <scene sceneID="I34-db-fUQ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MenuViewController" storyboardName="MenuViewController" id="DqT-uH-43H" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Menu" storyboardName="Menu" id="DqT-uH-43H" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="PXu-py-IAN"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPd-Ws-Opd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-976" y="-272"/>
         </scene>
-        <!--SettingsViewController-->
+        <!--Settings-->
         <scene sceneID="sfw-Lm-qzp">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SettingsViewController" storyboardName="SettingsViewController" id="S7l-AX-A1y" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Settings" storyboardName="Settings" id="S7l-AX-A1y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="2AN-J8-xKl"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FjR-v3-6lg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-976" y="18"/>
         </scene>
-        <!--FavoritesViewController-->
+        <!--Favorites-->
         <scene sceneID="vPY-9J-nzZ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="FavoritesViewController" storyboardName="FavoritesViewController" id="fya-MD-l1G" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Favorites" storyboardName="Favorites" id="fya-MD-l1G" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="xo8-f0-CEp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzO-gq-AyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

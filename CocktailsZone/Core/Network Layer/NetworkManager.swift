@@ -1,14 +1,6 @@
-//
-//  NetworkManager.swift
-//  CocktailsZone
-//
-//  Created by Ana Mepisashvili on 16.02.22.
-//
-
 import Foundation
 
 class NetworkManager {
-    
     static let shared = NetworkManager()
     
     private init() {}
@@ -32,7 +24,6 @@ class NetworkManager {
             } catch {
                 completion(.failure(error))
             }
-            
         }.resume()
     }
 }
