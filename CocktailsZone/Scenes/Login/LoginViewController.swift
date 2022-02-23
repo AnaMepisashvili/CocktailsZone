@@ -7,6 +7,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var LoginLabel: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
     
     var error = ""
     
@@ -20,6 +21,8 @@ class LoginViewController: BaseViewController {
     
     override func viewWillLayoutSubviews() {
         loginButton.layer.cornerRadius = 15
+        stackView.setCustomSpacing(10.0, after: usernameTextField)
+        stackView.setCustomSpacing(10.0, after: passwordTextField)
     }
     
     @IBAction func loginActionButton(_ sender: Any) {

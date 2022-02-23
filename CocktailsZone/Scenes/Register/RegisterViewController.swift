@@ -1,6 +1,7 @@
 import UIKit
 
 class RegisterViewController: BaseViewController {
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var mobileNumberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -21,7 +22,13 @@ class RegisterViewController: BaseViewController {
     
     override func viewWillLayoutSubviews() {
         title = "Register"
+        
         registerButton.layer.cornerRadius = 15
+        
+        stackView.setCustomSpacing(10.0, after: usernameTextField)
+        stackView.setCustomSpacing(10.0, after: mobileNumberTextField)
+        stackView.setCustomSpacing(10.0, after: emailTextField)
+        stackView.setCustomSpacing(10.0, after: passwordTextField)
     }
     
     @IBAction func registerActionButton(_ sender: Any) {

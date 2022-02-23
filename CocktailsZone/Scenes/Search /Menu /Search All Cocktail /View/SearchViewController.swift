@@ -6,12 +6,16 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel: SearchScreenViewModelProtocol!
-    private var dataSource: HomeTableDataSource!
     var apiService: CocktailServiceProtocol!
+    var cocktailArray: [Cocktail] = []{
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLayout()
+        setupTableView()
         configureViewModel()
         searchBar.delegate = self
     }
@@ -20,23 +24,33 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         title = "Cocktails"
     }
     
-    private func setupLayout() {
+    private func setupTableView() {
         tableView.registerNib(class: CoctailTableViewCell.self)
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
     private func configureViewModel() {
         apiService = CocktailsInfoApi()
         viewModel = SearchScreenViewModel(apiService: apiService)
-        dataSource = HomeTableDataSource(with: tableView, navigationController: navigationController!, viewModel: viewModel, activityIndicator: activityIndicator)
-        dataSource.refresh()
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText == "" {
-            dataSource.refresh()
-        } else {
-            dataSource.filterItemList(searchText)
+        viewModel.getCocktails(name: "Margarita") { cocktails in
+            self.cocktailArray.append(contentsOf: cocktails)
+        }
+        viewModel.reloadTableView = {
+            DispatchQueue.main.async { self.tableView.reloadData() }
         }
     }
+}
+
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cocktailArray.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.deque(CoctailTableViewCell.self, for: indexPath)
+        cell.configure(with: cocktailArray[indexPath.row])
+        return cell
+    }
 }

@@ -6,7 +6,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        self.navigationItem.leftBarButtonItem = nil
     }
     
     override func viewWillLayoutSubviews() {
@@ -16,7 +16,6 @@ class MenuViewController: UIViewController {
     
     @IBAction func searchCoctailByName(_ sender: Any) {
         let sb = UIStoryboard(name: "Search", bundle: nil)
-        self.tabBarController?.tabBar.isHidden = false
         let vc = sb.instantiateViewController(withIdentifier: "Search") as! SearchViewController
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -26,5 +25,4 @@ class MenuViewController: UIViewController {
         let vc = sb.instantiateViewController(withIdentifier: "Filter") as! FilterViewController
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

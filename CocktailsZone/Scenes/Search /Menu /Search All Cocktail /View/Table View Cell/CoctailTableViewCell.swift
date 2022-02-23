@@ -17,9 +17,9 @@ class CoctailTableViewCell: UITableViewCell {
         cocktailImage.layer.cornerRadius = 50
     }
     
-    func configure(with userItem: Cocktails, isFourth: Bool) {
-        cocktailNameLabel.text = userItem.name
-        let url = URL(string: userItem.avatarUrl!)
+    func configure(with cocktail: Cocktail) {
+        cocktailNameLabel.text = cocktail.name
+        let url = URL(string: cocktail.avatarUrl!)
         let data = try? Data(contentsOf: url!)
         cocktailImage.image = UIImage(data: data!)
     }

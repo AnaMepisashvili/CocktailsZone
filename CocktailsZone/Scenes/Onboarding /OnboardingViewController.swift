@@ -1,13 +1,11 @@
 import UIKit
 
-class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var skipButton: UIButton!
-    
-//    private var ViewModel: OnboardingViewModel!
-    
+        
     var slides: [OnboardingSlide] = []
     
     var currentPage = 0 {
@@ -31,7 +29,6 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICo
             OnboardingSlide(image: "SecondSlide"),
             OnboardingSlide(image: "ThirdSlide")
         ]
-//        configureViewModel()
         configureCollectionView()
     }
     
@@ -48,11 +45,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBAction func skipActionButton(_ sender: Any) {
         moveToLoginScreen()
     }
-    
-//    func configureViewModel() {
-//        ViewModel = OnboardingViewModel(with: collectionView, slides: slides, rootController: self)
-//    }
-    
+
     func moveToLoginScreen() {
         let sb = UIStoryboard(name: "Login", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController

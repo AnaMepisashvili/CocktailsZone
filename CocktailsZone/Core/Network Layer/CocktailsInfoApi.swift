@@ -1,28 +1,23 @@
 import Foundation
 
 protocol CocktailServiceProtocol: AnyObject {
-    func getCocktails(pagination: Bool, completion: @escaping ([[String: String?]]) -> Void)
+    func fetchCocktail(name: String, completion: @escaping ((Result<[Cocktail], Error>) -> Void))
 }
 
 class CocktailsInfoApi: CocktailServiceProtocol {
     private var count = 0
     
-    func getCocktails(pagination: Bool, completion: @escaping ([[String: String?]]) -> Void) {
-        if pagination {
-            count += 1
-        }
-        
-        let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=\(count)"
+    func fetchCocktail(name: String, completion: @escaping ((Result<[Cocktail], Error>) -> Void)) {
+        let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + name
         
         NetworkManager.shared.get(url: url) { (result: Result<CocktailsResponce, Error>) in
             switch result {
             case .success(let response):
                 DispatchQueue.main.async {
-                    completion(response.drinks)
+                    completion(.success(response.drinks))
                 }
             case .failure(let err):
-                
-                print(err)
+                completion(.failure(err))
             }
         }
     }

@@ -1,10 +1,10 @@
 import Foundation
 
 struct CocktailsResponce: Codable {
-    let drinks: [[String: String?]]
+    let drinks: [Cocktail]
 }
 
-struct Cocktails: Codable {
+struct Cocktail: Codable {
     let name: String?
     let instructions: String?
     let category: String?
