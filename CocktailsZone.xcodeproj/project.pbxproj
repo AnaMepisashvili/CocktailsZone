@@ -22,6 +22,7 @@
 		2B5420D827BC02FA00E82EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420D727BC02FA00E82EA7 /* Assets.xcassets */; };
 		2B5420DA27BC1EC300E82EA7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420D927BC1EC300E82EA7 /* Login.storyboard */; };
 		2B5420DC27BC1ED400E82EA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */; };
+		2B79287927C51E1C00998B7A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B79287827C51E1C00998B7A /* Colors.xcassets */; };
 		2B949FF027BD18EA001FFB18 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B949FEF27BD18EA001FFB18 /* UserManager.swift */; };
 		2B949FF227BD44BE001FFB18 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B949FF127BD44BE001FFB18 /* SearchViewController.swift */; };
 		2B949FF427BD44D5001FFB18 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B949FF327BD44D5001FFB18 /* Search.storyboard */; };
@@ -70,6 +71,7 @@
 		2B5420D927BC1EC300E82EA7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2B79287727C3C13F00998B7A /* FiraMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraMono-Regular.ttf"; sourceTree = "<group>"; };
+		2B79287827C51E1C00998B7A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B949FEF27BD18EA001FFB18 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		2B949FF127BD44BE001FFB18 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B949FF327BD44D5001FFB18 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		2B27CE9A27BA760500D7DA1B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2B79287A27C51E2400998B7A /* Colors */,
 				2B79287627C3C13000998B7A /* Fonts */,
 				2B27CE9B27BA761B00D7DA1B /* Images */,
 			);
@@ -313,6 +316,14 @@
 				2B79287727C3C13F00998B7A /* FiraMono-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2B79287A27C51E2400998B7A /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				2B79287827C51E1C00998B7A /* Colors.xcassets */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		2B949FEE27BD18C7001FFB18 /* Managers */ = {
@@ -480,6 +491,7 @@
 				2B5420D827BC02FA00E82EA7 /* Assets.xcassets in Resources */,
 				2B5420C627BA809300E82EA7 /* Register.storyboard in Resources */,
 				2B949FFC27BD466C001FFB18 /* Settings.storyboard in Resources */,
+				2B79287927C51E1C00998B7A /* Colors.xcassets in Resources */,
 				2B949FF827BD45CB001FFB18 /* Favorites.storyboard in Resources */,
 				2B94A03127C1402B001FFB18 /* FavoritesTableViewCell.xib in Resources */,
 			);

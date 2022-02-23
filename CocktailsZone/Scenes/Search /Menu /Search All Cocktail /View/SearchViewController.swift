@@ -16,6 +16,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         searchBar.delegate = self
     }
     
+    override func viewWillLayoutSubviews() {
+        title = "Cocktails"
+    }
+    
     private func setupLayout() {
         tableView.registerNib(class: CoctailTableViewCell.self)
     }

@@ -1,12 +1,12 @@
 import UIKit
 
-class OnboardingViewController: UIViewController {
+class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var skipButton: UIButton!
     
-    private var ViewModel: OnboardingViewModel!
+//    private var ViewModel: OnboardingViewModel!
     
     var slides: [OnboardingSlide] = []
     
@@ -31,7 +31,8 @@ class OnboardingViewController: UIViewController {
             OnboardingSlide(image: "SecondSlide"),
             OnboardingSlide(image: "ThirdSlide")
         ]
-        configureViewModel()
+//        configureViewModel()
+        configureCollectionView()
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
@@ -48,13 +49,49 @@ class OnboardingViewController: UIViewController {
         moveToLoginScreen()
     }
     
-    func configureViewModel() {
-        ViewModel = OnboardingViewModel(with: collectionView, slides: slides, rootController: self)
-    }
+//    func configureViewModel() {
+//        ViewModel = OnboardingViewModel(with: collectionView, slides: slides, rootController: self)
+//    }
     
     func moveToLoginScreen() {
         let sb = UIStoryboard(name: "Login", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func configureCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return slides.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingCollectionViewCell.identifier, for: indexPath) as! OnboardingCollectionViewCell
+        cell.setup(slides[indexPath.row])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        let currentPage = Int(scrollView.contentOffset.x / width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return  0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
