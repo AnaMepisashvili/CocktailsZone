@@ -25,16 +25,10 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="N96-2C-8rH">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                                <color key="color" red="0.59607843140000005" green="0.83137254900000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="N96-2C-8rH" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="4GO-aK-3kJ"/>
-                            <constraint firstItem="N96-2C-8rH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="50D-Cm-OPn"/>
                             <constraint firstItem="LjL-gS-Ufo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Hnj-Pr-EAy"/>
                             <constraint firstItem="LjL-gS-Ufo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Kka-5J-VDq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LjL-gS-Ufo" secondAttribute="trailing" id="MF1-XY-tQe"/>
@@ -44,7 +38,6 @@
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="NzE-07-d9V"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="N96-2C-8rH" id="cqn-qG-ATm"/>
                         <outlet property="searchBar" destination="0vG-d4-wZO" id="lAy-fp-Bn8"/>
                         <outlet property="tableView" destination="LjL-gS-Ufo" id="9Hz-gj-gdV"/>
                     </connections>

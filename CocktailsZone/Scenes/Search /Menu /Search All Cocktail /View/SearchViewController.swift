@@ -2,12 +2,11 @@ import UIKit
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel: SearchScreenViewModelProtocol!
     var apiService: CocktailServiceProtocol!
-    var cocktailArray: [Cocktail] = []{
+    var cocktailArray: [Cocktail] = [] {
         didSet {
             self.tableView.reloadData()
         }

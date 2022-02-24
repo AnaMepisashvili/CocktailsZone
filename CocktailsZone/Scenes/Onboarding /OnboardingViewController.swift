@@ -5,7 +5,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var skipButton: UIButton!
-        
+    
     var slides: [OnboardingSlide] = []
     
     var currentPage = 0 {
@@ -32,6 +32,21 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
         configureCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if Core.shared.isNewUser() {
+            Core.shared.notNewUser()
+        } else {
+            let mainAppViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login")
+
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let sceneDelegate = windowScene.delegate as? SceneDelegate,
+               let window = sceneDelegate.window{
+
+                window.rootViewController = mainAppViewController
+            }
+        }
+    }
+    
     @IBAction func nextButtonClicked(_ sender: Any) {
         if currentPage == slides.count - 1 {
             moveToLoginScreen()
@@ -45,7 +60,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
     @IBAction func skipActionButton(_ sender: Any) {
         moveToLoginScreen()
     }
-
+    
     func moveToLoginScreen() {
         let sb = UIStoryboard(name: "Login", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
@@ -73,7 +88,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
-        let currentPage = Int(scrollView.contentOffset.x / width)
+        _ = Int(scrollView.contentOffset.x / width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -86,5 +101,17 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+class Core {
+    static let shared = Core()
+    
+    func isNewUser() -> Bool{
+        return !UserDefaults.standard.bool(forKey: "isNewUser")
+    }
+    
+    func notNewUser(){
+        UserDefaults.standard.set(true, forKey: "isNewUser")
     }
 }
