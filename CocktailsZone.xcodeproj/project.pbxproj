@@ -23,6 +23,7 @@
 		2B5420DC27BC1ED400E82EA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */; };
 		2B79287927C51E1C00998B7A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B79287827C51E1C00998B7A /* Colors.xcassets */; };
 		2B7EE12127C8E05500CB08BC /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12027C8E05500CB08BC /* Cocktail.swift */; };
+		2B7EE12327C8E96300CB08BC /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12227C8E96300CB08BC /* FilterViewModel.swift */; };
 		2B949FF027BD18EA001FFB18 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B949FEF27BD18EA001FFB18 /* UserManager.swift */; };
 		2B949FF227BD44BE001FFB18 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B949FF127BD44BE001FFB18 /* SearchViewController.swift */; };
 		2B949FF427BD44D5001FFB18 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B949FF327BD44D5001FFB18 /* Search.storyboard */; };
@@ -35,7 +36,7 @@
 		2B94A00427BD4C10001FFB18 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A00327BD4C10001FFB18 /* NetworkManager.swift */; };
 		2B94A00827BD4C9F001FFB18 /* CoctailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A00627BD4C9F001FFB18 /* CoctailTableViewCell.swift */; };
 		2B94A00927BD4C9F001FFB18 /* CoctailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A00727BD4C9F001FFB18 /* CoctailTableViewCell.xib */; };
-		2B94A00B27BD4CF2001FFB18 /* SearchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A00A27BD4CF2001FFB18 /* SearchScreenViewModel.swift */; };
+		2B94A00B27BD4CF2001FFB18 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A00A27BD4CF2001FFB18 /* SearchViewModel.swift */; };
 		2B94A01227BD5644001FFB18 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01127BD5644001FFB18 /* UITableViewCell+Extensions.swift */; };
 		2B94A01427BD566A001FFB18 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01327BD566A001FFB18 /* UITableView+Extensions.swift */; };
 		2B94A01D27C11548001FFB18 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01C27C11548001FFB18 /* MenuViewController.swift */; };
@@ -71,6 +72,7 @@
 		2B79287727C3C13F00998B7A /* FiraMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraMono-Regular.ttf"; sourceTree = "<group>"; };
 		2B79287827C51E1C00998B7A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B7EE12027C8E05500CB08BC /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		2B7EE12227C8E96300CB08BC /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		2B949FEF27BD18EA001FFB18 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		2B949FF127BD44BE001FFB18 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B949FF327BD44D5001FFB18 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 		2B94A00327BD4C10001FFB18 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2B94A00627BD4C9F001FFB18 /* CoctailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailTableViewCell.swift; sourceTree = "<group>"; };
 		2B94A00727BD4C9F001FFB18 /* CoctailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoctailTableViewCell.xib; sourceTree = "<group>"; };
-		2B94A00A27BD4CF2001FFB18 /* SearchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewModel.swift; sourceTree = "<group>"; };
+		2B94A00A27BD4CF2001FFB18 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2B94A01127BD5644001FFB18 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		2B94A01327BD566A001FFB18 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		2B94A01C27C11548001FFB18 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -336,7 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				2B94A00527BD4C72001FFB18 /* Table View Cell */,
-				2B94A00A27BD4CF2001FFB18 /* SearchScreenViewModel.swift */,
+				2B94A00A27BD4CF2001FFB18 /* SearchViewModel.swift */,
 				2B949FF127BD44BE001FFB18 /* SearchViewController.swift */,
 				2B949FF327BD44D5001FFB18 /* Search.storyboard */,
 			);
@@ -376,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				2B94A02427C11D8D001FFB18 /* FilterTableViewCell */,
+				2B7EE12227C8E96300CB08BC /* FilterViewModel.swift */,
 				2B94A02027C11775001FFB18 /* FilterViewController.swift */,
 				2B94A02227C1177F001FFB18 /* Filter.storyboard */,
 			);
@@ -497,7 +500,7 @@
 				2B94A00227BD4B39001FFB18 /* CocktailInfo.swift in Sources */,
 				2B949FF227BD44BE001FFB18 /* SearchViewController.swift in Sources */,
 				2B5420C427BA808900E82EA7 /* RegisterViewController.swift in Sources */,
-				2B94A00B27BD4CF2001FFB18 /* SearchScreenViewModel.swift in Sources */,
+				2B94A00B27BD4CF2001FFB18 /* SearchViewModel.swift in Sources */,
 				2B94A00427BD4C10001FFB18 /* NetworkManager.swift in Sources */,
 				2B27CE8327BA754900D7DA1B /* AppDelegate.swift in Sources */,
 				2B94A02127C11775001FFB18 /* FilterViewController.swift in Sources */,
@@ -512,6 +515,7 @@
 				2B5420D427BA8CBC00E82EA7 /* OnboardingSlide.swift in Sources */,
 				2B94A01D27C11548001FFB18 /* MenuViewController.swift in Sources */,
 				2B94A01427BD566A001FFB18 /* UITableView+Extensions.swift in Sources */,
+				2B7EE12327C8E96300CB08BC /* FilterViewModel.swift in Sources */,
 				2B7EE12127C8E05500CB08BC /* Cocktail.swift in Sources */,
 				2B949FFA27BD4660001FFB18 /* SettingsViewController.swift in Sources */,
 				2B949FF627BD45BE001FFB18 /* FavoritesViewController.swift in Sources */,

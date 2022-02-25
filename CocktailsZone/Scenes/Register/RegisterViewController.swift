@@ -1,6 +1,6 @@
 import UIKit
 
-class RegisterViewController: BaseViewController {
+class RegisterViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var mobileNumberTextField: UITextField!
@@ -12,12 +12,8 @@ class RegisterViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.usernameTextField.delegate = self
-        self.mobileNumberTextField.delegate = self
-        self.emailTextField.delegate = self
-        self.passwordTextField.delegate = self
-        
         configureleftIcons()
+        ConfigureTextFieldShouldReturn()
     }
     
     override func viewWillLayoutSubviews() {
@@ -51,6 +47,13 @@ class RegisterViewController: BaseViewController {
             successfullyRegisteredAlert()
             UserDefault.createUser(usernameTextField: usernameTextField.text!, passwordTextField: passwordTextField.text!)
         }
+    }
+    
+    func ConfigureTextFieldShouldReturn() {
+        usernameTextField.textFieldShouldReturn()
+        mobileNumberTextField.textFieldShouldReturn()
+        emailTextField.textFieldShouldReturn()
+        passwordTextField.textFieldShouldReturn()
     }
     
     func showErrorAlert() {

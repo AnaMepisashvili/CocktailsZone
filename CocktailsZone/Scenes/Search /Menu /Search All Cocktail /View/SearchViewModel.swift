@@ -1,12 +1,12 @@
 import UIKit
 
-protocol SearchScreenViewModelProtocol: AnyObject {
+protocol SearchViewModelProtocol: AnyObject {
     func getCocktails(name: String, completion: @escaping (([CocktailInfo]) -> Void))
     var cocktailArray: [CocktailInfo] { get set }
     var reloadTableView: (()->())? { get set }
 }
 
-class SearchScreenViewModel: SearchScreenViewModelProtocol {
+class SearchViewModel: SearchViewModelProtocol {
     private var apiService: CocktailServiceProtocol!
     
     var cocktailArray = [CocktailInfo]()

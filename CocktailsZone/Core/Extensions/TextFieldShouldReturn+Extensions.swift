@@ -1,13 +1,13 @@
 import UIKit
 
-class BaseViewController: UIViewController, UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let nextTag = textField.tag + 1
+extension UITextField {
+    func textFieldShouldReturn() -> Bool {
+        let nextTag = self.tag + 1
         
-        if let nextResponder = textField.superview?.viewWithTag(nextTag) {
+        if let nextResponder = self.superview?.viewWithTag(nextTag) {
             nextResponder.becomeFirstResponder()
         } else {
-            textField.resignFirstResponder()
+            self.resignFirstResponder()
         }
         return true
     }

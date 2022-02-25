@@ -1,7 +1,7 @@
 import UIKit
 import CloudKit
 
-class LoginViewController: BaseViewController {
+class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -16,7 +16,7 @@ class LoginViewController: BaseViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         configureleftIcons()
-        configureTableView()
+        ConfigureTextFieldShouldReturn()
     }
     
     override func viewWillLayoutSubviews() {
@@ -72,9 +72,9 @@ class LoginViewController: BaseViewController {
         passwordTextField.leftViewMode = .always
     }
     
-    func configureTableView() {
-        self.usernameTextField.delegate = self
-        self.passwordTextField.delegate = self
+    func ConfigureTextFieldShouldReturn() {
+        usernameTextField.textFieldShouldReturn()
+        passwordTextField.textFieldShouldReturn()
     }
     
     func showError() {
