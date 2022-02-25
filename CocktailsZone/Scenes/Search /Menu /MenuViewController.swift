@@ -6,16 +6,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.isHidden = false
+        self.tabBarController?.navigationItem.hidesBackButton = true
     }
     
     override func viewWillLayoutSubviews() {

@@ -8,6 +8,11 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         configureTableView()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        title = "Favorites"
+    }
+    
     func configureTableView() {
         self.tableView.dataSource = self
         self.tableView.delegate = self

@@ -16,11 +16,17 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         setupTableView()
         configureViewModel()
+        configureNavigationController()
         searchBar.delegate = self
     }
     
     override func viewWillLayoutSubviews() {
         title = "Cocktails"
+    }
+    
+    func configureNavigationController() {
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "#98D4D9")
     }
     
     private func setupTableView() {

@@ -7,10 +7,17 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        configureNavigationController()
     }
     
     override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         title = "Filter"
+    }
+    
+    func configureNavigationController() {
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "#98D4D9")
     }
     
     func configureTableView() {
