@@ -1,10 +1,3 @@
-//
-//  CoctailTableViewCell.swift
-//  CocktailsZone
-//
-//  Created by Ana Mepisashvili on 16.02.22.
-//
-
 import UIKit
 
 class CoctailTableViewCell: UITableViewCell {
@@ -17,8 +10,9 @@ class CoctailTableViewCell: UITableViewCell {
         cocktailImage.layer.cornerRadius = 50
     }
     
-    func configure(with cocktail: Cocktail) {
+    func configure(with cocktail: CocktailInfo) {
         cocktailNameLabel.text = cocktail.name
+        categoryLabel.text = cocktail.category
         let url = URL(string: cocktail.avatarUrl!)
         let data = try? Data(contentsOf: url!)
         cocktailImage.image = UIImage(data: data!)

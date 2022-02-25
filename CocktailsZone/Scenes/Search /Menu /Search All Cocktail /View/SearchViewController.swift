@@ -6,7 +6,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     
     private var viewModel: SearchScreenViewModelProtocol!
     var apiService: CocktailServiceProtocol!
-    var cocktailArray: [Cocktail] = [] {
+    var cocktailArray: [CocktailInfo] = [] {
         didSet {
             self.tableView.reloadData()
         }
@@ -31,7 +31,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     private func configureViewModel() {
-        apiService = CocktailsInfoApi()
+        apiService = CocktailsApi()
         viewModel = SearchScreenViewModel(apiService: apiService)
         viewModel.getCocktails(name: "Margarita") { cocktails in
             self.cocktailArray.append(contentsOf: cocktails)

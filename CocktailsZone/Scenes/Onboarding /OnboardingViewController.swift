@@ -31,22 +31,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
         ]
         configureCollectionView()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        if Core.shared.isNewUser() {
-            Core.shared.notNewUser()
-        } else {
-            let mainAppViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login")
 
-            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-               let sceneDelegate = windowScene.delegate as? SceneDelegate,
-               let window = sceneDelegate.window{
-
-                window.rootViewController = mainAppViewController
-            }
-        }
-    }
-    
     @IBAction func nextButtonClicked(_ sender: Any) {
         if currentPage == slides.count - 1 {
             moveToLoginScreen()
@@ -101,17 +86,5 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
-    }
-}
-
-class Core {
-    static let shared = Core()
-    
-    func isNewUser() -> Bool{
-        return !UserDefaults.standard.bool(forKey: "isNewUser")
-    }
-    
-    func notNewUser(){
-        UserDefaults.standard.set(true, forKey: "isNewUser")
     }
 }
