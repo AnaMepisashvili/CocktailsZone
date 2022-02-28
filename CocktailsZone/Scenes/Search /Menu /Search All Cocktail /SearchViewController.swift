@@ -1,23 +1,17 @@
 import UIKit
 
-class SearchViewController: UIViewController, UISearchBarDelegate {
+class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel: SearchViewModelProtocol!
     var apiService: CocktailServiceProtocol!
-    var cocktailArray: [CocktailInfo] = [] {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         configureViewModel()
         configureNavigationController()
-        searchBar.delegate = self
     }
     
     override func viewWillLayoutSubviews() {
@@ -39,9 +33,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     private func configureViewModel() {
         apiService = CocktailsApi()
         viewModel = SearchViewModel(apiService: apiService)
-        viewModel.getCocktails(name: "Margarita") { cocktails in
-            self.cocktailArray.append(contentsOf: cocktails)
-        }
+        viewModel.getCocktails(name: "Margarita")
         viewModel.reloadTableView = {
             DispatchQueue.main.async { self.tableView.reloadData() }
         }
@@ -50,12 +42,19 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cocktailArray.count
+        return viewModel.cocktailArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(CoctailTableViewCell.self, for: indexPath)
-        cell.configure(with: cocktailArray[indexPath.row])
+        cell.configure(with: viewModel.cocktailArray[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "CoctailInfo", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "CoctailInfo") as! CoctailInfoViewController
+        vc.coctail = viewModel.cocktailArray[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

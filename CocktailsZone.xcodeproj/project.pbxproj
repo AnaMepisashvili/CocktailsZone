@@ -24,6 +24,8 @@
 		2B79287927C51E1C00998B7A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B79287827C51E1C00998B7A /* Colors.xcassets */; };
 		2B7EE12127C8E05500CB08BC /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12027C8E05500CB08BC /* Cocktail.swift */; };
 		2B7EE12327C8E96300CB08BC /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12227C8E96300CB08BC /* FilterViewModel.swift */; };
+		2B7EE12527C8ED1100CB08BC /* AlcoholApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12427C8ED1100CB08BC /* AlcoholApi.swift */; };
+		2B7EE12727C8ED2A00CB08BC /* NonAlcoholAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12627C8ED2A00CB08BC /* NonAlcoholAPI.swift */; };
 		2B949FF027BD18EA001FFB18 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B949FEF27BD18EA001FFB18 /* UserManager.swift */; };
 		2B949FF227BD44BE001FFB18 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B949FF127BD44BE001FFB18 /* SearchViewController.swift */; };
 		2B949FF427BD44D5001FFB18 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B949FF327BD44D5001FFB18 /* Search.storyboard */; };
@@ -49,7 +51,7 @@
 		2B94A03027C1402B001FFB18 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02E27C1402B001FFB18 /* FavoritesTableViewCell.swift */; };
 		2B94A03127C1402B001FFB18 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */; };
 		2B94A03627C14267001FFB18 /* CoctailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */; };
-		2B94A03827C1426F001FFB18 /* CoctailInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A03727C1426F001FFB18 /* CoctailInfoViewController.storyboard */; };
+		2B94A03827C1426F001FFB18 /* CoctailInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A03727C1426F001FFB18 /* CoctailInfo.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		2B79287827C51E1C00998B7A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B7EE12027C8E05500CB08BC /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		2B7EE12227C8E96300CB08BC /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		2B7EE12427C8ED1100CB08BC /* AlcoholApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholApi.swift; sourceTree = "<group>"; };
+		2B7EE12627C8ED2A00CB08BC /* NonAlcoholAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAlcoholAPI.swift; sourceTree = "<group>"; };
 		2B949FEF27BD18EA001FFB18 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		2B949FF127BD44BE001FFB18 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B949FF327BD44D5001FFB18 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -98,7 +102,7 @@
 		2B94A02E27C1402B001FFB18 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailInfoViewController.swift; sourceTree = "<group>"; };
-		2B94A03727C1426F001FFB18 /* CoctailInfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoctailInfoViewController.storyboard; sourceTree = "<group>"; };
+		2B94A03727C1426F001FFB18 /* CoctailInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoctailInfo.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,8 @@
 			children = (
 				2B94A00327BD4C10001FFB18 /* NetworkManager.swift */,
 				2B949FFF27BD4B06001FFB18 /* CocktailsApi.swift */,
+				2B7EE12427C8ED1100CB08BC /* AlcoholApi.swift */,
+				2B7EE12627C8ED2A00CB08BC /* NonAlcoholAPI.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -334,17 +340,6 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		2B949FFE27BD4A3B001FFB18 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2B94A00527BD4C72001FFB18 /* Table View Cell */,
-				2B94A00A27BD4CF2001FFB18 /* SearchViewModel.swift */,
-				2B949FF127BD44BE001FFB18 /* SearchViewController.swift */,
-				2B949FF327BD44D5001FFB18 /* Search.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		2B94A00527BD4C72001FFB18 /* Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,8 +363,11 @@
 		2B94A01A27C11468001FFB18 /* Search All Cocktail  */ = {
 			isa = PBXGroup;
 			children = (
+				2B94A00527BD4C72001FFB18 /* Table View Cell */,
+				2B94A00A27BD4CF2001FFB18 /* SearchViewModel.swift */,
+				2B949FF127BD44BE001FFB18 /* SearchViewController.swift */,
+				2B949FF327BD44D5001FFB18 /* Search.storyboard */,
 				2B94A03327C14225001FFB18 /* Coctail Info */,
-				2B949FFE27BD4A3B001FFB18 /* View */,
 			);
 			path = "Search All Cocktail ";
 			sourceTree = "<group>";
@@ -407,7 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */,
-				2B94A03727C1426F001FFB18 /* CoctailInfoViewController.storyboard */,
+				2B94A03727C1426F001FFB18 /* CoctailInfo.storyboard */,
 			);
 			path = "Coctail Info";
 			sourceTree = "<group>";
@@ -472,7 +470,7 @@
 			files = (
 				2B5420C827BA80BB00E82EA7 /* TabBarController.storyboard in Resources */,
 				2B94A00927BD4C9F001FFB18 /* CoctailTableViewCell.xib in Resources */,
-				2B94A03827C1426F001FFB18 /* CoctailInfoViewController.storyboard in Resources */,
+				2B94A03827C1426F001FFB18 /* CoctailInfo.storyboard in Resources */,
 				2B94A01F27C11552001FFB18 /* Menu.storyboard in Resources */,
 				2B94A02A27C11DC6001FFB18 /* FilterTableViewCell.xib in Resources */,
 				2B27CE9227BA754A00D7DA1B /* LaunchScreen.storyboard in Resources */,
@@ -511,6 +509,7 @@
 				2B94A00027BD4B06001FFB18 /* CocktailsApi.swift in Sources */,
 				2B94A02C27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift in Sources */,
 				2B94A03627C14267001FFB18 /* CoctailInfoViewController.swift in Sources */,
+				2B7EE12727C8ED2A00CB08BC /* NonAlcoholAPI.swift in Sources */,
 				2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */,
 				2B5420D427BA8CBC00E82EA7 /* OnboardingSlide.swift in Sources */,
 				2B94A01D27C11548001FFB18 /* MenuViewController.swift in Sources */,
@@ -519,6 +518,7 @@
 				2B7EE12127C8E05500CB08BC /* Cocktail.swift in Sources */,
 				2B949FFA27BD4660001FFB18 /* SettingsViewController.swift in Sources */,
 				2B949FF627BD45BE001FFB18 /* FavoritesViewController.swift in Sources */,
+				2B7EE12527C8ED1100CB08BC /* AlcoholApi.swift in Sources */,
 				2B94A00827BD4C9F001FFB18 /* CoctailTableViewCell.swift in Sources */,
 				2B94A02927C11DC6001FFB18 /* FilterTableViewCell.swift in Sources */,
 				2B94A01227BD5644001FFB18 /* UITableViewCell+Extensions.swift in Sources */,

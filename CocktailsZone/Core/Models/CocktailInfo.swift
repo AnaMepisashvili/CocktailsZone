@@ -6,14 +6,14 @@ struct CocktailsResponce: Codable {
 
 struct CocktailInfo: Codable {
     let name: String?
-    let instructions: String?
+    let instruction: String?
     let category: String?
-    let avatarUrl: String?
+    let cocktailImage: String?
 
     enum CodingKeys: String, CodingKey {
         case name = "strDrink"
-        case instructions = "strInstructions"
+        case instruction = "strInstructions"
         case category = "strCategory"
-        case avatarUrl = "strDrinkThumb"
+        case cocktailImage = "strDrinkThumb"
     }
 }

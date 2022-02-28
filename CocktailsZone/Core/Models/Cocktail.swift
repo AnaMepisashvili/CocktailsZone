@@ -6,10 +6,10 @@ struct Cocktails: Codable {
 
 struct Cocktail: Codable {
     let name: String?
-    let avatarUrl: String?
+    let cocktailImage: String?
 
     enum CodingKeys: String, CodingKey {
         case name = "strDrink"
-        case avatarUrl = "strDrinkThumb"
+        case cocktailImage = "strDrinkThumb"
     }
 }

@@ -1,7 +1,7 @@
 import UIKit
 
 extension UITextField {
-    func textFieldShouldReturn() -> Bool {
+    func textFieldShouldReturn() {
         let nextTag = self.tag + 1
         
         if let nextResponder = self.superview?.viewWithTag(nextTag) {
@@ -9,6 +9,5 @@ extension UITextField {
         } else {
             self.resignFirstResponder()
         }
-        return true
     }
 }

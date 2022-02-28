@@ -11,8 +11,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
     
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {}
-
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "CocktailsZone")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in

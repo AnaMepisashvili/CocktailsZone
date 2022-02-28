@@ -26,6 +26,9 @@
                                         <segment title="Alcohol"/>
                                         <segment title="Non-Alcohol"/>
                                     </segments>
+                                    <connections>
+                                        <action selector="didChangeSegment:" destination="Y6W-OH-hqX" eventType="valueChanged" id="SdY-ws-MtA"/>
+                                    </connections>
                                 </segmentedControl>
                             </tableView>
                         </subviews>
@@ -40,6 +43,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Filter" id="QSd-Eo-UA0"/>
                     <connections>
+                        <outlet property="segmentedControl" destination="5Bo-UD-vlR" id="URJ-Xo-8Np"/>
                         <outlet property="tableView" destination="N6U-tF-1C9" id="qJ2-zz-4Xd"/>
                     </connections>
                 </viewController>
