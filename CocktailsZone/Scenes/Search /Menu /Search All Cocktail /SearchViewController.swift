@@ -9,8 +9,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
-        configureViewModel()
+        searchBar.delegate = self
         configureNavigationController()
     }
     
@@ -28,15 +27,6 @@ class SearchViewController: UIViewController {
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-    }
-    
-    private func configureViewModel() {
-        apiService = CocktailsApi()
-        viewModel = SearchViewModel(apiService: apiService)
-        viewModel.getCocktails(name: "Margarita")
-        viewModel.reloadTableView = {
-            DispatchQueue.main.async { self.tableView.reloadData() }
-        }
     }
 }
 
@@ -56,5 +46,19 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let vc = sb.instantiateViewController(withIdentifier: "CocktailInfo") as! CocktailInfoViewController
         vc.coctail = viewModel.cocktailArray[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText != "" {
+            setupTableView()
+            apiService = CocktailsApi()
+            viewModel = SearchViewModel(apiService: apiService)
+            viewModel.getCocktails(name: searchText)
+            viewModel.reloadTableView = {
+                DispatchQueue.main.async { self.tableView.reloadData() }
+            }
+        }
     }
 }
