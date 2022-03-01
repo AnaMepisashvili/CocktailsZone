@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16E3BB058DC1EC23BB4FA49E /* Pods_CocktailsZone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CD71E1E674A51609C3B126 /* Pods_CocktailsZone.framework */; };
 		2B27CE8327BA754900D7DA1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27CE8227BA754900D7DA1B /* AppDelegate.swift */; };
 		2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27CE8427BA754900D7DA1B /* SceneDelegate.swift */; };
 		2B27CE8A27BA754900D7DA1B /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B27CE8827BA754900D7DA1B /* Onboarding.storyboard */; };
@@ -25,7 +26,7 @@
 		2B7EE12127C8E05500CB08BC /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12027C8E05500CB08BC /* Cocktail.swift */; };
 		2B7EE12327C8E96300CB08BC /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12227C8E96300CB08BC /* FilterViewModel.swift */; };
 		2B7EE12527C8ED1100CB08BC /* AlcoholApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12427C8ED1100CB08BC /* AlcoholApi.swift */; };
-		2B7EE12727C8ED2A00CB08BC /* NonAlcoholAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12627C8ED2A00CB08BC /* NonAlcoholAPI.swift */; };
+		2B7EE12727C8ED2A00CB08BC /* NonAlcoholApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12627C8ED2A00CB08BC /* NonAlcoholApi.swift */; };
 		2B949FF027BD18EA001FFB18 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B949FEF27BD18EA001FFB18 /* UserManager.swift */; };
 		2B949FF227BD44BE001FFB18 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B949FF127BD44BE001FFB18 /* SearchViewController.swift */; };
 		2B949FF427BD44D5001FFB18 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B949FF327BD44D5001FFB18 /* Search.storyboard */; };
@@ -51,10 +52,12 @@
 		2B94A03027C1402B001FFB18 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02E27C1402B001FFB18 /* FavoritesTableViewCell.swift */; };
 		2B94A03127C1402B001FFB18 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */; };
 		2B94A03627C14267001FFB18 /* CoctailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */; };
-		2B94A03827C1426F001FFB18 /* CoctailInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A03727C1426F001FFB18 /* CoctailInfo.storyboard */; };
+		2B94A03827C1426F001FFB18 /* CocktailInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A03727C1426F001FFB18 /* CocktailInfo.storyboard */; };
+		2BF0F62927CE5BE5007099A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF0F62827CE5BE5007099A1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2305812FC4BB3BFB7EBBA418 /* Pods-CocktailsZone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailsZone.debug.xcconfig"; path = "Target Support Files/Pods-CocktailsZone/Pods-CocktailsZone.debug.xcconfig"; sourceTree = "<group>"; };
 		2B27CE7F27BA754900D7DA1B /* CocktailsZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailsZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B27CE8227BA754900D7DA1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B27CE8427BA754900D7DA1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +79,7 @@
 		2B7EE12027C8E05500CB08BC /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		2B7EE12227C8E96300CB08BC /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		2B7EE12427C8ED1100CB08BC /* AlcoholApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholApi.swift; sourceTree = "<group>"; };
-		2B7EE12627C8ED2A00CB08BC /* NonAlcoholAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAlcoholAPI.swift; sourceTree = "<group>"; };
+		2B7EE12627C8ED2A00CB08BC /* NonAlcoholApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAlcoholApi.swift; sourceTree = "<group>"; };
 		2B949FEF27BD18EA001FFB18 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		2B949FF127BD44BE001FFB18 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B949FF327BD44D5001FFB18 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -102,7 +105,10 @@
 		2B94A02E27C1402B001FFB18 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailInfoViewController.swift; sourceTree = "<group>"; };
-		2B94A03727C1426F001FFB18 /* CoctailInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoctailInfo.storyboard; sourceTree = "<group>"; };
+		2B94A03727C1426F001FFB18 /* CocktailInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CocktailInfo.storyboard; sourceTree = "<group>"; };
+		2BF0F62827CE5BE5007099A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		59CD71E1E674A51609C3B126 /* Pods_CocktailsZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailsZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		874A7BFCAA1AC1358744AF7C /* Pods-CocktailsZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailsZone.release.xcconfig"; path = "Target Support Files/Pods-CocktailsZone/Pods-CocktailsZone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E3BB058DC1EC23BB4FA49E /* Pods_CocktailsZone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +128,8 @@
 			children = (
 				2B27CE8127BA754900D7DA1B /* CocktailsZone */,
 				2B27CE8027BA754900D7DA1B /* Products */,
+				40DA79EB531FDD661D729910 /* Pods */,
+				50934BB747D31C9F83884451 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +230,7 @@
 		2B27CEA027BA769500D7DA1B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2BF0F62827CE5BE5007099A1 /* GoogleService-Info.plist */,
 				2B27CE9327BA754A00D7DA1B /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -240,7 +250,7 @@
 				2B94A00327BD4C10001FFB18 /* NetworkManager.swift */,
 				2B949FFF27BD4B06001FFB18 /* CocktailsApi.swift */,
 				2B7EE12427C8ED1100CB08BC /* AlcoholApi.swift */,
-				2B7EE12627C8ED2A00CB08BC /* NonAlcoholAPI.swift */,
+				2B7EE12627C8ED2A00CB08BC /* NonAlcoholApi.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -367,7 +377,7 @@
 				2B94A00A27BD4CF2001FFB18 /* SearchViewModel.swift */,
 				2B949FF127BD44BE001FFB18 /* SearchViewController.swift */,
 				2B949FF327BD44D5001FFB18 /* Search.storyboard */,
-				2B94A03327C14225001FFB18 /* Coctail Info */,
+				2B94A03327C14225001FFB18 /* Cocktail Info */,
 			);
 			path = "Search All Cocktail ";
 			sourceTree = "<group>";
@@ -401,13 +411,31 @@
 			path = FavoritesTableViewCell;
 			sourceTree = "<group>";
 		};
-		2B94A03327C14225001FFB18 /* Coctail Info */ = {
+		2B94A03327C14225001FFB18 /* Cocktail Info */ = {
 			isa = PBXGroup;
 			children = (
 				2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */,
-				2B94A03727C1426F001FFB18 /* CoctailInfo.storyboard */,
+				2B94A03727C1426F001FFB18 /* CocktailInfo.storyboard */,
 			);
-			path = "Coctail Info";
+			path = "Cocktail Info";
+			sourceTree = "<group>";
+		};
+		40DA79EB531FDD661D729910 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2305812FC4BB3BFB7EBBA418 /* Pods-CocktailsZone.debug.xcconfig */,
+				874A7BFCAA1AC1358744AF7C /* Pods-CocktailsZone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		50934BB747D31C9F83884451 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59CD71E1E674A51609C3B126 /* Pods_CocktailsZone.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,9 +445,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B27CE9627BA754A00D7DA1B /* Build configuration list for PBXNativeTarget "CocktailsZone" */;
 			buildPhases = (
+				E7F54FF533022EBB47B65706 /* [CP] Check Pods Manifest.lock */,
 				2B27CE7B27BA754900D7DA1B /* Sources */,
 				2B27CE7C27BA754900D7DA1B /* Frameworks */,
 				2B27CE7D27BA754900D7DA1B /* Resources */,
+				78C8FA1765EFDB2F97ABE1DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,7 +500,7 @@
 			files = (
 				2B5420C827BA80BB00E82EA7 /* TabBarController.storyboard in Resources */,
 				2B94A00927BD4C9F001FFB18 /* CoctailTableViewCell.xib in Resources */,
-				2B94A03827C1426F001FFB18 /* CoctailInfo.storyboard in Resources */,
+				2B94A03827C1426F001FFB18 /* CocktailInfo.storyboard in Resources */,
 				2B94A01F27C11552001FFB18 /* Menu.storyboard in Resources */,
 				2B94A02A27C11DC6001FFB18 /* FilterTableViewCell.xib in Resources */,
 				2B27CE9227BA754A00D7DA1B /* LaunchScreen.storyboard in Resources */,
@@ -480,6 +510,7 @@
 				2B94A02327C1177F001FFB18 /* Filter.storyboard in Resources */,
 				2B5420D827BC02FA00E82EA7 /* Assets.xcassets in Resources */,
 				2B5420C627BA809300E82EA7 /* Register.storyboard in Resources */,
+				2BF0F62927CE5BE5007099A1 /* GoogleService-Info.plist in Resources */,
 				2B949FFC27BD466C001FFB18 /* Settings.storyboard in Resources */,
 				2B79287927C51E1C00998B7A /* Colors.xcassets in Resources */,
 				2B949FF827BD45CB001FFB18 /* Favorites.storyboard in Resources */,
@@ -488,6 +519,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78C8FA1765EFDB2F97ABE1DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocktailsZone/Pods-CocktailsZone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocktailsZone/Pods-CocktailsZone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CocktailsZone/Pods-CocktailsZone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7F54FF533022EBB47B65706 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CocktailsZone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B27CE7B27BA754900D7DA1B /* Sources */ = {
@@ -509,7 +582,7 @@
 				2B94A00027BD4B06001FFB18 /* CocktailsApi.swift in Sources */,
 				2B94A02C27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift in Sources */,
 				2B94A03627C14267001FFB18 /* CoctailInfoViewController.swift in Sources */,
-				2B7EE12727C8ED2A00CB08BC /* NonAlcoholAPI.swift in Sources */,
+				2B7EE12727C8ED2A00CB08BC /* NonAlcoholApi.swift in Sources */,
 				2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */,
 				2B5420D427BA8CBC00E82EA7 /* OnboardingSlide.swift in Sources */,
 				2B94A01D27C11548001FFB18 /* MenuViewController.swift in Sources */,
@@ -666,6 +739,7 @@
 		};
 		2B27CE9727BA754A00D7DA1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2305812FC4BB3BFB7EBBA418 /* Pods-CocktailsZone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -694,6 +768,7 @@
 		};
 		2B27CE9827BA754A00D7DA1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874A7BFCAA1AC1358744AF7C /* Pods-CocktailsZone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

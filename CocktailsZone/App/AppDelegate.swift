@@ -1,9 +1,11 @@
 import UIKit
+import Firebase
 import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
         return true
     }
 
@@ -19,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         })
         return container
-    }()
+    } ()
     
     func saveContext() {
         let context = persistentContainer.viewContext
@@ -33,4 +35,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 }
-

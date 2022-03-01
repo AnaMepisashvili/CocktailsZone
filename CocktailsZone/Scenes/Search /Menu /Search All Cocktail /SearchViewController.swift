@@ -52,8 +52,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard(name: "CoctailInfo", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "CoctailInfo") as! CoctailInfoViewController
+        let sb = UIStoryboard(name: "CocktailInfo", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "CocktailInfo") as! CocktailInfoViewController
         vc.coctail = viewModel.cocktailArray[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
