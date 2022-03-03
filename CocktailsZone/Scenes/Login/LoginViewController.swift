@@ -1,67 +1,58 @@
 import UIKit
-import CloudKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var LoginLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
-    var error = ""
+    private var loginviewModel: LoginViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
+        setupViewModel()
         configureleftIcons()
         ConfigureTextFieldShouldReturn()
     }
     
     override func viewWillLayoutSubviews() {
-        loginButton.layer.cornerRadius = 15
-        stackView.setCustomSpacing(10.0, after: usernameTextField)
+        stackView.setCustomSpacing(10.0, after: emailTextField)
         stackView.setCustomSpacing(10.0, after: passwordTextField)
     }
     
-    @IBAction func loginActionButton(_ sender: Any) {
-        guard let unwrapedUserName = usernameTextField.text else {
-            return
+    func setupViewModel() {
+        loginviewModel = LoginViewModel()
+        loginviewModel.presentAlert = { alert in
+            self.navigationController?.present(alert, animated: true, completion: nil)
         }
-        guard let unwrapedPassword = passwordTextField.text else {
-            return
-        }
-        
-        if passwordTextField.text == UserDefault.getPasswordForThisUser(usernameTextField: unwrapedUserName) && !unwrapedPassword.isEmpty {
-            let sb = UIStoryboard(name: "TabBarController", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "TabBarController")
-            navigationController?.pushViewController(vc, animated: true)
-        } else {
-            error = "Error"
-            showError()
+        loginviewModel.navigation = { vc in
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
-    @IBAction func registerActionButton(_ sender: Any) {
-        let sb = UIStoryboard(name: "Register", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Register") as! RegisterViewController
-        navigationController?.pushViewController(vc, animated: true)
+    func ConfigureTextFieldShouldReturn() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     func configureleftIcons() {
-        guard let personIcon = UIImage(systemName: "person") else { return }
+        guard let envelopeIcon = UIImage(systemName: "envelope") else { return }
         guard let lockIcon = UIImage(systemName: "lock") else { return }
-        addleftImageTo(usernameTextField: usernameTextField,
+        addleftImageTo(usernameTextField: emailTextField,
                        passwordTextField: passwordTextField,
-                       personIcon: personIcon,
+                       envelopeIcon: envelopeIcon,
                        lockIcon: lockIcon)
     }
     
-    func addleftImageTo(usernameTextField: UITextField, passwordTextField: UITextField, personIcon: UIImage, lockIcon: UIImage) {
-        let leftImageViewPerson = UIImageView()
-        leftImageViewPerson.image = personIcon
-        usernameTextField.leftView = leftImageViewPerson
+    func addleftImageTo(usernameTextField: UITextField, passwordTextField: UITextField, envelopeIcon: UIImage, lockIcon: UIImage) {
+        let leftImageViewEnvelope = UIImageView()
+        leftImageViewEnvelope.image = envelopeIcon
+        usernameTextField.leftView = leftImageViewEnvelope
         usernameTextField.tintColor = UIColor(named: "#98D4D9")
         usernameTextField.leftViewMode = .always
         
@@ -72,19 +63,30 @@ class LoginViewController: UIViewController {
         passwordTextField.leftViewMode = .always
     }
     
-    func ConfigureTextFieldShouldReturn() {
-        usernameTextField.textFieldShouldReturn()
-        passwordTextField.textFieldShouldReturn()
-    }
-    
-    func showError() {
-        let alert = UIAlertController.init(title: "Error", message: error, preferredStyle: .alert)
-        let okAction = UIAlertAction.init(title: "okay", style: .default, handler: nil)
-        alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    @IBAction func loginActionButton(_ sender: Any) {
+        loginviewModel.loginClicked(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+    }
+    
+    @IBAction func registerActionButton(_ sender: Any) {
+        let sb = UIStoryboard(name: "Register", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Register") as! RegisterViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag = textField.tag + 1
+        if let nextResponder = textField.superview?.viewWithTag(nextTag) {
+            nextResponder.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+

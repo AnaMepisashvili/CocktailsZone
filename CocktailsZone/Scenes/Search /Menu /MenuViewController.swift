@@ -9,11 +9,6 @@ class MenuViewController: UIViewController {
         self.tabBarController?.navigationItem.hidesBackButton = true
     }
     
-    override func viewWillLayoutSubviews() {
-        searchCoctailByNameButton.layer.cornerRadius = 15
-        filterByAlcoholicButton.layer.cornerRadius = 15
-    }
-    
     @IBAction func searchCoctailByName(_ sender: Any) {
         let sb = UIStoryboard(name: "Search", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Search") as! SearchViewController

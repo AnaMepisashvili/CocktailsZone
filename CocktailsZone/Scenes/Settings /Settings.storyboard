@@ -35,6 +35,11 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="LogOut:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nzn-5n-UqU"/>
                                 </connections>

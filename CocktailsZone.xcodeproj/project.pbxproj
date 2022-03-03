@@ -22,6 +22,10 @@
 		2B5420D827BC02FA00E82EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420D727BC02FA00E82EA7 /* Assets.xcassets */; };
 		2B5420DA27BC1EC300E82EA7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420D927BC1EC300E82EA7 /* Login.storyboard */; };
 		2B5420DC27BC1ED400E82EA7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */; };
+		2B566A9927CFD69E00849A55 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B566A9827CFD69E00849A55 /* LoginViewModel.swift */; };
+		2B566A9C27D0B47A00849A55 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B566A9B27D0B47A00849A55 /* RegisterViewModel.swift */; };
+		2B566A9E27D0CD4D00849A55 /* PasswordValid+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B566A9D27D0CD4D00849A55 /* PasswordValid+Extension.swift */; };
+		2B566AA027D0E82900849A55 /* CornerRadius+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B566A9F27D0E82900849A55 /* CornerRadius+Extention.swift */; };
 		2B79287927C51E1C00998B7A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B79287827C51E1C00998B7A /* Colors.xcassets */; };
 		2B7EE12127C8E05500CB08BC /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12027C8E05500CB08BC /* Cocktail.swift */; };
 		2B7EE12327C8E96300CB08BC /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EE12227C8E96300CB08BC /* FilterViewModel.swift */; };
@@ -48,7 +52,6 @@
 		2B94A02327C1177F001FFB18 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02227C1177F001FFB18 /* Filter.storyboard */; };
 		2B94A02927C11DC6001FFB18 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02727C11DC6001FFB18 /* FilterTableViewCell.swift */; };
 		2B94A02A27C11DC6001FFB18 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02827C11DC6001FFB18 /* FilterTableViewCell.xib */; };
-		2B94A02C27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02B27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift */; };
 		2B94A03027C1402B001FFB18 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02E27C1402B001FFB18 /* FavoritesTableViewCell.swift */; };
 		2B94A03127C1402B001FFB18 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */; };
 		2B94A03627C14267001FFB18 /* CoctailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */; };
@@ -74,6 +77,10 @@
 		2B5420D727BC02FA00E82EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B5420D927BC1EC300E82EA7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2B566A9827CFD69E00849A55 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2B566A9B27D0B47A00849A55 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		2B566A9D27D0CD4D00849A55 /* PasswordValid+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PasswordValid+Extension.swift"; sourceTree = "<group>"; };
+		2B566A9F27D0E82900849A55 /* CornerRadius+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornerRadius+Extention.swift"; sourceTree = "<group>"; };
 		2B79287727C3C13F00998B7A /* FiraMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraMono-Regular.ttf"; sourceTree = "<group>"; };
 		2B79287827C51E1C00998B7A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B7EE12027C8E05500CB08BC /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
@@ -101,7 +108,6 @@
 		2B94A02227C1177F001FFB18 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		2B94A02727C11DC6001FFB18 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		2B94A02827C11DC6001FFB18 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
-		2B94A02B27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldShouldReturn+Extensions.swift"; sourceTree = "<group>"; };
 		2B94A02E27C1402B001FFB18 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		2B94A03527C14267001FFB18 /* CoctailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailInfoViewController.swift; sourceTree = "<group>"; };
@@ -185,7 +191,8 @@
 			children = (
 				2B94A01127BD5644001FFB18 /* UITableViewCell+Extensions.swift */,
 				2B94A01327BD566A001FFB18 /* UITableView+Extensions.swift */,
-				2B94A02B27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift */,
+				2B566A9F27D0E82900849A55 /* CornerRadius+Extention.swift */,
+				2B566A9D27D0CD4D00849A55 /* PasswordValid+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +283,7 @@
 		2B5420B927BA7F8100E82EA7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2B566A9827CFD69E00849A55 /* LoginViewModel.swift */,
 				2B5420DB27BC1ED400E82EA7 /* LoginViewController.swift */,
 				2B5420D927BC1EC300E82EA7 /* Login.storyboard */,
 			);
@@ -285,6 +293,7 @@
 		2B5420BA27BA7F9700E82EA7 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				2B566A9B27D0B47A00849A55 /* RegisterViewModel.swift */,
 				2B5420C327BA808900E82EA7 /* RegisterViewController.swift */,
 				2B5420C527BA809300E82EA7 /* Register.storyboard */,
 			);
@@ -426,7 +435,6 @@
 				2305812FC4BB3BFB7EBBA418 /* Pods-CocktailsZone.debug.xcconfig */,
 				874A7BFCAA1AC1358744AF7C /* Pods-CocktailsZone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -575,15 +583,18 @@
 				2B94A00427BD4C10001FFB18 /* NetworkManager.swift in Sources */,
 				2B27CE8327BA754900D7DA1B /* AppDelegate.swift in Sources */,
 				2B94A02127C11775001FFB18 /* FilterViewController.swift in Sources */,
+				2B566A9E27D0CD4D00849A55 /* PasswordValid+Extension.swift in Sources */,
+				2B566A9927CFD69E00849A55 /* LoginViewModel.swift in Sources */,
 				2B949FF027BD18EA001FFB18 /* UserManager.swift in Sources */,
 				2B94A03027C1402B001FFB18 /* FavoritesTableViewCell.swift in Sources */,
 				2B5420B827BA7E8800E82EA7 /* OnboardingViewController.swift in Sources */,
 				2B5420D027BA8C6200E82EA7 /* OnboardingCollectionViewCell.swift in Sources */,
 				2B94A00027BD4B06001FFB18 /* CocktailsApi.swift in Sources */,
-				2B94A02C27C12C7E001FFB18 /* TextFieldShouldReturn+Extensions.swift in Sources */,
 				2B94A03627C14267001FFB18 /* CoctailInfoViewController.swift in Sources */,
 				2B7EE12727C8ED2A00CB08BC /* NonAlcoholApi.swift in Sources */,
+				2B566AA027D0E82900849A55 /* CornerRadius+Extention.swift in Sources */,
 				2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */,
+				2B566A9C27D0B47A00849A55 /* RegisterViewModel.swift in Sources */,
 				2B5420D427BA8CBC00E82EA7 /* OnboardingSlide.swift in Sources */,
 				2B94A01D27C11548001FFB18 /* MenuViewController.swift in Sources */,
 				2B94A01427BD566A001FFB18 /* UITableView+Extensions.swift in Sources */,

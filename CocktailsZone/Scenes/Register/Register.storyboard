@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlt-0n-TuB">
-                                <rect key="frame" x="40" y="691" width="334" height="57"/>
+                                <rect key="frame" x="40" y="692.5" width="334" height="57"/>
                                 <color key="backgroundColor" red="0.59607843137254901" green="0.83137254901960778" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="r8B-Vs-27K"/>
@@ -27,12 +27,17 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="registerActionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lzX-Gb-2Pr"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="kmP-7t-rga">
-                                <rect key="frame" x="40" y="259.5" width="334" height="321.5"/>
+                                <rect key="frame" x="40" y="259.5" width="334" height="323"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7C9-Vm-xNq">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="18.5"/>
@@ -71,12 +76,12 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sM2-Ms-BSd">
-                                        <rect key="frame" x="0.0" y="268.5" width="334" height="17"/>
+                                        <rect key="frame" x="0.0" y="268.5" width="334" height="18.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTM-HU-yrs">
-                                        <rect key="frame" x="0.0" y="320.5" width="334" height="1"/>
+                                        <rect key="frame" x="0.0" y="322" width="334" height="1"/>
                                         <color key="backgroundColor" red="0.59607843140000005" green="0.83137254900000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Yz2-Gc-miC"/>
@@ -113,9 +118,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="CQt-ZQ-v0X"/>
                     <connections>
-                        <outlet property="emailTextField" destination="zgM-nG-oyM" id="tVY-3N-Xoa"/>
-                        <outlet property="mobileNumberTextField" destination="Ix9-j0-psh" id="z2x-cc-pS8"/>
-                        <outlet property="passwordTextField" destination="sM2-Ms-BSd" id="8je-RW-2h3"/>
+                        <outlet property="emailTextField" destination="zgM-nG-oyM" id="lXu-wP-C5F"/>
+                        <outlet property="mobileNumberTextField" destination="Ix9-j0-psh" id="5TS-XD-rMc"/>
+                        <outlet property="passwordTextField" destination="sM2-Ms-BSd" id="wKf-10-Tel"/>
                         <outlet property="registerButton" destination="Dlt-0n-TuB" id="vfy-hz-kmP"/>
                         <outlet property="stackView" destination="kmP-7t-rga" id="Ppd-vd-Mdp"/>
                         <outlet property="usernameTextField" destination="7C9-Vm-xNq" id="KjF-iR-MiE"/>

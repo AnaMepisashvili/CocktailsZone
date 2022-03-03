@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
@@ -8,10 +9,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     
-    var error = ""
+    private var registerViewModel: RegisterViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewModel()
         configureleftIcons()
         ConfigureTextFieldShouldReturn()
     }
@@ -19,61 +21,27 @@ class RegisterViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         title = "Register"
         
-        registerButton.layer.cornerRadius = 15
-        
         stackView.setCustomSpacing(10.0, after: usernameTextField)
         stackView.setCustomSpacing(10.0, after: mobileNumberTextField)
         stackView.setCustomSpacing(10.0, after: emailTextField)
         stackView.setCustomSpacing(10.0, after: passwordTextField)
     }
     
-    @IBAction func registerActionButton(_ sender: Any) {
-        if ((usernameTextField.text?.isEmpty) == true) {
-            error = "Username is empty"
-            showErrorAlert()
+    func setupViewModel() {
+        registerViewModel = RegisterViewModel()
+        registerViewModel.presentAlert = { alert in
+            self.navigationController?.present(alert, animated: true, completion: nil)
         }
-        else if ((mobileNumberTextField.text?.isEmpty) == true) {
-            error = "Mobile Number is empty"
-            showErrorAlert()
-        }
-        else if ((emailTextField.text?.isEmpty) == true) {
-            error = "E-mail Adress is empty"
-            showErrorAlert()
-        }
-        else if ((passwordTextField.text?.isEmpty) == true) {
-            error = "Password is empty"
-            showErrorAlert()
-        } else {
-            successfullyRegisteredAlert()
-            UserDefault.createUser(usernameTextField: usernameTextField.text!, passwordTextField: passwordTextField.text!)
+        registerViewModel.navigation = { vc in
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     func ConfigureTextFieldShouldReturn() {
-        usernameTextField.textFieldShouldReturn()
-        mobileNumberTextField.textFieldShouldReturn()
-        emailTextField.textFieldShouldReturn()
-        passwordTextField.textFieldShouldReturn()
-    }
-    
-    func showErrorAlert() {
-        let alert = UIAlertController.init(title: "Regisration Failed", message: error, preferredStyle: .alert)
-        let Action = UIAlertAction.init(title: "OK", style: .default, handler: nil)
-        alert.addAction(Action)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func successfullyRegisteredAlert() {
-        let alert = UIAlertController(title: nil, message: "Registration completed successfully", preferredStyle: .alert)
-        let act = UIAlertAction.init(title: "Login", style: .default) { _ in
-            self.navigationController?.popViewController(animated: true)
-        }
-        alert.addAction(act)
-        present(alert, animated: true)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        mobileNumberTextField.delegate = self
+        emailTextField.delegate = self
     }
     
     func configureleftIcons() {
@@ -81,25 +49,25 @@ class RegisterViewController: UIViewController {
         guard let phoneIcon = UIImage(systemName: "phone") else { return }
         guard let envelopeIcon = UIImage(systemName: "envelope") else { return }
         guard let lockIcon = UIImage(systemName: "lock") else { return }
-
+        
         addLeftIconTo(usernameTextField: usernameTextField,
-                       mobileNumberTextField: mobileNumberTextField,
-                       emailTextField: emailTextField,
-                       passwordTextField: passwordTextField,
-                       personIcon: personIcon,
-                       phoneIcon: phoneIcon,
-                       envelopeIcon: envelopeIcon,
-                       lockIcon: lockIcon)
+                      mobileNumberTextField: mobileNumberTextField,
+                      emailTextField: emailTextField,
+                      passwordTextField: passwordTextField,
+                      personIcon: personIcon,
+                      phoneIcon: phoneIcon,
+                      envelopeIcon: envelopeIcon,
+                      lockIcon: lockIcon)
     }
     
     func addLeftIconTo(usernameTextField: UITextField,
-                        mobileNumberTextField: UITextField,
-                        emailTextField: UITextField,
-                        passwordTextField: UITextField,
-                        personIcon: UIImage,
-                        phoneIcon: UIImage,
-                        envelopeIcon: UIImage,
-                        lockIcon: UIImage) {
+                       mobileNumberTextField: UITextField,
+                       emailTextField: UITextField,
+                       passwordTextField: UITextField,
+                       personIcon: UIImage,
+                       phoneIcon: UIImage,
+                       envelopeIcon: UIImage,
+                       lockIcon: UIImage) {
         
         let leftIconPerson = UIImageView()
         leftIconPerson .image = personIcon
@@ -124,5 +92,25 @@ class RegisterViewController: UIViewController {
         passwordTextField.leftView = leftIconLock
         passwordTextField.tintColor = UIColor(named: "#98D4D9")
         passwordTextField.leftViewMode = .always
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func registerActionButton(_ sender: Any) {
+        registerViewModel.registerClicked(username: usernameTextField.text ?? "", phone: mobileNumberTextField.text ?? "", email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+    }
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag = textField.tag + 1
+        if let nextResponder = textField.superview?.viewWithTag(nextTag) {
+            nextResponder.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }

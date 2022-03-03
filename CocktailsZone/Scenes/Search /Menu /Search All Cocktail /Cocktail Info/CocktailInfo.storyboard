@@ -22,6 +22,11 @@
                                     <constraint firstAttribute="height" constant="250" id="1gb-gN-Qhe"/>
                                     <constraint firstAttribute="width" constant="250" id="l1P-G0-R0b"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocktail Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grO-Z1-uNG">
                                 <rect key="frame" x="20" y="414" width="374" height="24"/>

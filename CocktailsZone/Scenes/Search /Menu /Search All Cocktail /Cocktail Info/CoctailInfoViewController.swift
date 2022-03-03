@@ -13,15 +13,11 @@ class CocktailInfoViewController: UIViewController {
         fillCoctailInfo()
     }
     
-    override func viewDidLayoutSubviews() {
-        cocktailImage.layer.cornerRadius = cocktailImage.bounds.width/2
-    }
-    
     func fillCoctailInfo() {
         cocktailNameLabel.text = coctail?.name
         cocktailInstructionLabel.text = coctail?.instruction
         categoryLabel.text = coctail?.category
-//        categoryLabel.text = "Categrory: \(coctail?.category)"
+        
         if  let url = URL(string: coctail?.cocktailImage ?? ""),
             let data = try? Data(contentsOf: url) {
             self.cocktailImage.image = UIImage(data: data)

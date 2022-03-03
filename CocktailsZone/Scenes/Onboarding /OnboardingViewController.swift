@@ -21,9 +21,6 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        skipButton.layer.cornerRadius = 15
-        nextButton.layer.cornerRadius = 15
-        
         slides = [
             OnboardingSlide(image: "FirstSlide"),
             OnboardingSlide(image: "SecondSlide"),

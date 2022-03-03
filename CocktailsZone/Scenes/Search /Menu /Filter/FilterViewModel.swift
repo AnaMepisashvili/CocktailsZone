@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 protocol FilterModelProtocol: AnyObject {
     func getCocktail()

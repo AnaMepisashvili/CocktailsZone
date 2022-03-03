@@ -39,6 +39,11 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Coctail by  Name">
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="searchCoctailByName:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eG1-Q0-NMj"/>
                                         </connections>
@@ -51,6 +56,11 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Filter by Alcohol">
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="filterByAlcoholic:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W5W-7e-xca"/>
                                         </connections>

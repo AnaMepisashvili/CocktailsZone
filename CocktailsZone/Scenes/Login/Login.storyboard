@@ -33,6 +33,11 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginActionButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LC1-vo-vAp"/>
                                 </connections>
@@ -64,7 +69,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="9Dz-7l-Wpy">
                                 <rect key="frame" x="40" y="317.5" width="334" height="157.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e39-au-uYe">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e39-au-uYe">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="18.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -114,11 +119,11 @@
                     <navigationItem key="navigationItem" id="89N-qf-3fn"/>
                     <connections>
                         <outlet property="LoginLabel" destination="PxB-0V-bo3" id="F6K-Wi-nat"/>
+                        <outlet property="emailTextField" destination="e39-au-uYe" id="Sge-qY-2Ps"/>
                         <outlet property="loginButton" destination="HNo-ND-Gcc" id="2HP-G0-K3O"/>
                         <outlet property="passwordTextField" destination="YFS-JF-8Cf" id="ZnA-tn-C4O"/>
                         <outlet property="registerButton" destination="3dH-V1-txu" id="gzz-1D-oLN"/>
                         <outlet property="stackView" destination="9Dz-7l-Wpy" id="7eo-5C-Q7M"/>
-                        <outlet property="usernameTextField" destination="e39-au-uYe" id="T7u-7R-GSQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

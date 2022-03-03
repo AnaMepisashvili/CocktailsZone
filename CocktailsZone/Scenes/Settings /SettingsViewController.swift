@@ -11,7 +11,6 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        logOutButton.layer.cornerRadius = 15
         profileImageView.layer.cornerRadius = profileImageView.bounds.width/2
     }
     
@@ -34,7 +33,6 @@ extension SettingsViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage  {
             profileImageView.image = image
-
         }
         picker.dismiss(animated: true, completion: nil)
     }

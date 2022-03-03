@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 protocol SearchViewModelProtocol: AnyObject {
     func getCocktails(name: String)

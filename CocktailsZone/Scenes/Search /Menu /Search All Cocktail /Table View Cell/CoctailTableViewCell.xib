@@ -23,6 +23,11 @@
                             <constraint firstAttribute="width" constant="100" id="1lV-NU-bz9"/>
                             <constraint firstAttribute="height" constant="100" id="Ok3-BQ-wbR"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="50"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdv-WH-ysP">
                         <rect key="frame" x="136" y="77" width="175" height="21"/>

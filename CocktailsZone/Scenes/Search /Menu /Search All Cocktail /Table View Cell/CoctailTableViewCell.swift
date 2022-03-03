@@ -7,11 +7,6 @@ class CoctailTableViewCell: UITableViewCell {
     @IBOutlet weak var cocktailImage: UIImageView!
     
     var isFavourite:Bool = true
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        cocktailImage.layer.cornerRadius = 50
-    }
     
     func configure(with cocktail: CocktailInfo) {
         cocktailNameLabel.text = cocktail.name
