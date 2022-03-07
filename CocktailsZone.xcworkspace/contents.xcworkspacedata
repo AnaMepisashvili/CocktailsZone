@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FavoritesData+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:FavoritesData+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:CocktailsZone.xcodeproj">
    </FileRef>
    <FileRef

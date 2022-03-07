@@ -1,31 +1,64 @@
 import UIKit
 
-class FavoritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FavoritesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel: FavoritesViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        configureViewModel()
+        configTableView()
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        title = "Favorites"
+    func configureViewModel() {
+        viewModel = FavoritesViewModel()
+        viewModel.refresh()
+        viewModel.reloadTableView = {DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }}
     }
     
-    func configureTableView() {
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+    func configTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        tableView.registerNib(class: FavoritesTableViewCell.self)
+        let nib = UINib(nibName: "FavoritesTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "FavoritesTableViewCell")
     }
-    
+}
+
+extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        viewModel.models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.deque(FavoritesTableViewCell.self, for: indexPath)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesTableViewCell") as? FavoritesTableViewCell
+        cell?.configure(with: viewModel.models[indexPath.row])
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "CocktailInfo", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "CocktailInfo") as! CocktailInfoViewController
+//        vc.savedCoctail = viewModel.models[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let tempManager = ModelManager(with: PersistantManager())
+        
+        let action1 = UIContextualAction(style: .destructive,
+                                         title: "Delete") { [weak self] a, b, c in
+            guard let self = self else { return }
+            tempManager.deleteModel(usingModel: self.viewModel.models[indexPath.row]) { bool in
+                print(bool)
+            }
+            self.viewModel.refresh()
+        }
+        
+        let swipeConfigure = UISwipeActionsConfiguration(actions: [action1])
+        return swipeConfigure
     }
 }
