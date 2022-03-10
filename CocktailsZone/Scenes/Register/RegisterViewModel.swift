@@ -3,8 +3,9 @@ import FirebaseAuth
 
 protocol RegisterViewModelProtocol: AnyObject {
     func showAlert(message: String)
-    func registerClicked(username: String, phone: String, email: String, password: String)
+    func registerClicked(username: String, number: String, email: String, password: String)
     
+    //    var userArray: [UserInfo] { get set }
     var navigation: ((UIViewController)->())? {get set}
     var presentAlert: ((UIAlertController)->())? {get set}
 }
@@ -12,6 +13,26 @@ protocol RegisterViewModelProtocol: AnyObject {
 class RegisterViewModel: RegisterViewModelProtocol {
     var navigation: ((UIViewController) -> ())?
     var presentAlert: ((UIAlertController) -> ())?
+    
+    var coreDataManager = CoreDataManager()
+    var savedUser = UserData()
+    //    var userArray: [UserInfo] = []
+    var user = UserInfo(username: "", email: "", number: "", password: "", userImage: "", userID: "")
+    
+    func createNewUser(username: String, userID: String, email: String, password: String, number: String, userImage: String) {
+        user.email = email
+        user.username = username
+        user.password = password
+        user.number = number
+        user.userImage = userImage
+        user.userID = userID
+    }
+    
+    func saveUser(with user: UserInfo) {
+        coreDataManager.saveUser(user: user) { savedUser in
+            self.savedUser = savedUser
+        }
+    }
     
     func showAlert(message: String) {
         let alert = UIAlertController.init(title: "", message: message, preferredStyle: .alert)
@@ -37,8 +58,8 @@ class RegisterViewModel: RegisterViewModelProtocol {
         return nil
     }
     
-    func registerClicked(username: String, phone: String, email: String, password: String) {
-        let error = validateFields(username: username, phone: phone, email: email, password: password)
+    func registerClicked(username: String, number: String, email: String, password: String) {
+        let error = validateFields(username: username, phone: number, email: email, password: password)
         
         if error != nil {
             self.showAlert(message: "Something is wrong")
@@ -57,11 +78,12 @@ class RegisterViewModel: RegisterViewModelProtocol {
                         changeRequest.commitChanges { error in
                             if let error = error {
                                 print(error)
-                            } else {
-                                
                             }
                         }
                     }
+                    guard let userID = user?.uid else {return}
+                    self.createNewUser(username: username, userID: userID, email: email, password: password, number: number, userImage: "")
+                    self.saveUser(with: self.user)
                     self.successfullyRegisteredAlert(message: "Registration completed successfully!")
                 }
             }

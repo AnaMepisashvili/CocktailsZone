@@ -8,7 +8,11 @@ class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewModel()
-        configTableView()
+        configureTableView()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        title = "Favorites"
     }
     
     func configureViewModel() {
@@ -19,7 +23,7 @@ class FavoritesViewController: UIViewController {
         }}
     }
     
-    func configTableView() {
+    func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -42,22 +46,21 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "CocktailInfo", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "CocktailInfo") as! CocktailInfoViewController
-//        vc.savedCoctail = viewModel.models[indexPath.row]
+        //        vc.savedCoctail = viewModel.models[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let tempManager = ModelManager(with: PersistantManager())
+        let tempManager = CoreDataManager()
         
         let action1 = UIContextualAction(style: .destructive,
                                          title: "Delete") { [weak self] a, b, c in
             guard let self = self else { return }
-            tempManager.deleteModel(usingModel: self.viewModel.models[indexPath.row]) { bool in
+            tempManager.deleteCoctailInfo(usingModel: self.viewModel.models[indexPath.row]) { bool in
                 print(bool)
             }
             self.viewModel.refresh()
         }
-        
         let swipeConfigure = UISwipeActionsConfiguration(actions: [action1])
         return swipeConfigure
     }

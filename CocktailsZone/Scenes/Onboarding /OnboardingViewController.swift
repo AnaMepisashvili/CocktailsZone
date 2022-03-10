@@ -31,6 +31,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
 
     @IBAction func nextButtonClicked(_ sender: Any) {
         if currentPage == slides.count - 1 {
+            UserDefaults.standard.set(true, forKey: "Finished")
             moveToLoginScreen()
         } else {
             currentPage += 1
@@ -40,6 +41,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
     }
     
     @IBAction func skipActionButton(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: "Finished")
         moveToLoginScreen()
     }
     

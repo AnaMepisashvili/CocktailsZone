@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FavoritesData" representedClassName="FavoritesData" syncable="YES" codeGenerationType="class">
         <attribute name="category" optional="YES" attributeType="String"/>
-        <attribute name="coctailName" optional="YES" attributeType="String"/>
+        <attribute name="cocktailName" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="instruction" optional="YES" attributeType="String"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserData" inverseName="favourite" inverseEntity="UserData"/>
     </entity>
     <entity name="UserData" representedClassName="UserData" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="number" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="userID" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="favourite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoritesData" inverseName="user" inverseEntity="FavoritesData"/>
     </entity>
     <elements>
-        <element name="FavoritesData" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="UserData" positionX="-54" positionY="18" width="128" height="89"/>
+        <element name="FavoritesData" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="UserData" positionX="-54" positionY="18" width="128" height="134"/>
     </elements>
 </model>

@@ -38,6 +38,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(CoctailTableViewCell.self, for: indexPath)
         cell.configure(with: viewModel.cocktailArray[indexPath.row])
+        cell.favorite = {}
         return cell
     }
     

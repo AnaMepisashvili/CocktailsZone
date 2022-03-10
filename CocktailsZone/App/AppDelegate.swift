@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         })
         return container
-    } ()
+    }()
     
     func saveContext() {
         let context = persistentContainer.viewContext

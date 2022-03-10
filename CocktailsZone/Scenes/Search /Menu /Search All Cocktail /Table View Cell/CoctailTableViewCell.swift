@@ -7,6 +7,7 @@ class CoctailTableViewCell: UITableViewCell {
     @IBOutlet weak var cocktailImage: UIImageView!
     
     var isFavourite:Bool = true
+    var favorite: (()->())?
     
     func configure(with cocktail: CocktailInfo) {
         cocktailNameLabel.text = cocktail.name
@@ -25,5 +26,6 @@ class CoctailTableViewCell: UITableViewCell {
             favouriteStarButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
             favouriteStarButton.tintColor = UIColor(named: "#98D4D9")
         }
+        self.favorite?()
     }
 }

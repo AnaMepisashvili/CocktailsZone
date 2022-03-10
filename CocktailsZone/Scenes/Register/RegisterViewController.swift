@@ -99,7 +99,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerActionButton(_ sender: Any) {
-        registerViewModel.registerClicked(username: usernameTextField.text ?? "", phone: mobileNumberTextField.text ?? "", email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        registerViewModel.registerClicked(username: usernameTextField.text ?? "", number: mobileNumberTextField.text ?? "", email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
 }
 

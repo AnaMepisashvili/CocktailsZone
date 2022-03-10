@@ -55,8 +55,8 @@
 		2B94A03127C1402B001FFB18 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */; };
 		2B94A03627C14267001FFB18 /* CocktailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A03527C14267001FFB18 /* CocktailInfoViewController.swift */; };
 		2B94A03827C1426F001FFB18 /* CocktailInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A03727C1426F001FFB18 /* CocktailInfo.storyboard */; };
-		2BAC5CCC27D62A46007B96F5 /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC5CCB27D62A46007B96F5 /* PersistentManager.swift */; };
-		2BAC5CCE27D62A80007B96F5 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC5CCD27D62A80007B96F5 /* ModelManager.swift */; };
+		2BA18DAC27D8D96C00000A8D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA18DAB27D8D96C00000A8D /* UserInfo.swift */; };
+		2BAC5CCE27D62A80007B96F5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC5CCD27D62A80007B96F5 /* CoreDataManager.swift */; };
 		2BAC5CD027D62A96007B96F5 /* BasePersistentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC5CCF27D62A96007B96F5 /* BasePersistentProtocol.swift */; };
 		2BAC5CDA27D63E30007B96F5 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC5CD927D63E30007B96F5 /* FavoritesViewModel.swift */; };
 		2BF0F62927CE5BE5007099A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF0F62827CE5BE5007099A1 /* GoogleService-Info.plist */; };
@@ -114,8 +114,8 @@
 		2B94A02F27C1402B001FFB18 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		2B94A03527C14267001FFB18 /* CocktailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailInfoViewController.swift; sourceTree = "<group>"; };
 		2B94A03727C1426F001FFB18 /* CocktailInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CocktailInfo.storyboard; sourceTree = "<group>"; };
-		2BAC5CCB27D62A46007B96F5 /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
-		2BAC5CCD27D62A80007B96F5 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		2BA18DAB27D8D96C00000A8D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		2BAC5CCD27D62A80007B96F5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2BAC5CCF27D62A96007B96F5 /* BasePersistentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePersistentProtocol.swift; sourceTree = "<group>"; };
 		2BAC5CD927D63E30007B96F5 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		2BF0F62827CE5BE5007099A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -221,6 +221,7 @@
 				2B5420D327BA8CBC00E82EA7 /* OnboardingSlide.swift */,
 				2B94A00127BD4B39001FFB18 /* CocktailInfo.swift */,
 				2B7EE12027C8E05500CB08BC /* Cocktail.swift */,
+				2BA18DAB27D8D96C00000A8D /* UserInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -362,8 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				2BAC5CCF27D62A96007B96F5 /* BasePersistentProtocol.swift */,
-				2BAC5CCB27D62A46007B96F5 /* PersistentManager.swift */,
-				2BAC5CCD27D62A80007B96F5 /* ModelManager.swift */,
+				2BAC5CCD27D62A80007B96F5 /* CoreDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -615,9 +615,9 @@
 				2B7EE12527C8ED1100CB08BC /* AlcoholApi.swift in Sources */,
 				2B94A00827BD4C9F001FFB18 /* CoctailTableViewCell.swift in Sources */,
 				2B94A02927C11DC6001FFB18 /* FilterTableViewCell.swift in Sources */,
-				2BAC5CCE27D62A80007B96F5 /* ModelManager.swift in Sources */,
+				2BAC5CCE27D62A80007B96F5 /* CoreDataManager.swift in Sources */,
+				2BA18DAC27D8D96C00000A8D /* UserInfo.swift in Sources */,
 				2B94A01227BD5644001FFB18 /* UITableViewCell+Extensions.swift in Sources */,
-				2BAC5CCC27D62A46007B96F5 /* PersistentManager.swift in Sources */,
 				2B27CE8D27BA754900D7DA1B /* CocktailsZone.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -774,7 +774,6 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Onboarding;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -804,7 +803,6 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Onboarding;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

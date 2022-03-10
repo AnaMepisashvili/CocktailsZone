@@ -12,6 +12,7 @@ class CocktailInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fillCoctailInfo()
+        //        fillSavedCoctailInfo()
     }
     
     func fillCoctailInfo() {
@@ -25,10 +26,15 @@ class CocktailInfoViewController: UIViewController {
         }
     }
     
+    func fillSavedCoctailInfo() {
+        cocktailNameLabel.text = savedCoctail?.coctailName
+        
+    }
+    
     @IBAction func favoriteButton(_ sender: Any) {
         guard let model = coctail else { return }
-        let tempManager = ModelManager(with: PersistantManager())
-        tempManager.uploadModel(usingModel: model, image: (cocktailImage.image?.pngData())!) { bool in
+        let tempManager = CoreDataManager()
+        tempManager.saveCoctailInfo(usingModel: model, image: (cocktailImage.image?.pngData())!) { bool in
         }
     }
 }
