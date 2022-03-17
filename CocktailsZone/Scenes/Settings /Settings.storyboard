@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,17 +14,17 @@
             <objects>
                 <viewController storyboardIdentifier="Settings" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="CocktailsZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ana Mepisashvili" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpv-Xi-AC3">
-                                <rect key="frame" x="20" y="425" width="374" height="26.5"/>
+                                <rect key="frame" x="20" y="310" width="280" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHK-xa-n8d">
-                                <rect key="frame" x="50" y="645.5" width="314" height="57.5"/>
+                                <rect key="frame" x="50" y="391.5" width="220" height="57.5"/>
                                 <color key="backgroundColor" red="0.59607843140000005" green="0.83137254900000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57.5" id="bbo-Hv-wgq"/>
@@ -44,8 +44,8 @@
                                     <action selector="LogOut:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nzn-5n-UqU"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9ms-I2-dgj">
-                                <rect key="frame" x="92" y="130.5" width="230" height="229"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="9ms-I2-dgj">
+                                <rect key="frame" x="45" y="50" width="230" height="230"/>
                                 <color key="tintColor" red="0.59607843137254901" green="0.83137254901960778" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="2Fi-Aw-die"/>
@@ -53,10 +53,12 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEi-Ic-7jk">
-                                <rect key="frame" x="20" y="361" width="374" height="31"/>
+                                <rect key="frame" x="20" y="223" width="280" height="32"/>
                                 <color key="tintColor" red="0.53790234296476303" green="0.83137254900000002" blue="0.85092359520000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Upload Image"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="uploadImageAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ckO-Zj-HjK"/>
                                 </connections>
@@ -65,11 +67,11 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9ms-I2-dgj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="86" id="A5K-3V-tN6"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HHK-xa-n8d" secondAttribute="bottom" constant="110" id="GWX-XL-CES"/>
-                            <constraint firstItem="vEi-Ic-7jk" firstAttribute="top" secondItem="9ms-I2-dgj" secondAttribute="bottom" constant="1" id="MWJ-6p-kfy"/>
+                            <constraint firstItem="9ms-I2-dgj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="A5K-3V-tN6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HHK-xa-n8d" secondAttribute="bottom" constant="70" id="GWX-XL-CES"/>
+                            <constraint firstItem="vEi-Ic-7jk" firstAttribute="top" secondItem="9ms-I2-dgj" secondAttribute="bottom" constant="-57" id="MWJ-6p-kfy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vEi-Ic-7jk" secondAttribute="trailing" constant="20" id="SHb-oa-pq4"/>
-                            <constraint firstItem="Kpv-Xi-AC3" firstAttribute="top" secondItem="9ms-I2-dgj" secondAttribute="bottom" constant="65" id="U3Y-Yd-HxN"/>
+                            <constraint firstItem="Kpv-Xi-AC3" firstAttribute="top" secondItem="9ms-I2-dgj" secondAttribute="bottom" constant="30" id="U3Y-Yd-HxN"/>
                             <constraint firstItem="vEi-Ic-7jk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Vjo-D9-d2W"/>
                             <constraint firstItem="9ms-I2-dgj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bMQ-LU-S9R"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kpv-Xi-AC3" secondAttribute="trailing" constant="20" id="eBB-Ud-btj"/>
@@ -84,6 +86,7 @@
                         <outlet property="logOutButton" destination="HHK-xa-n8d" id="l96-wc-18E"/>
                         <outlet property="profileImageView" destination="9ms-I2-dgj" id="YQY-wN-sHY"/>
                         <outlet property="uploadImageButton" destination="vEi-Ic-7jk" id="kfW-Yc-gPB"/>
+                        <outlet property="usernameLabel" destination="Kpv-Xi-AC3" id="969-7z-JIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,8 +96,8 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
+        <image name="default" width="288" height="287"/>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

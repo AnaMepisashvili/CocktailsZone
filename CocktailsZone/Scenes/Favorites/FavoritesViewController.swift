@@ -46,7 +46,8 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "CocktailInfo", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "CocktailInfo") as! CocktailInfoViewController
-        //        vc.savedCoctail = viewModel.models[indexPath.row]
+        vc.savedCoctail = viewModel.models[indexPath.row]
+        vc.controller = .favorite
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -56,9 +57,7 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         let action1 = UIContextualAction(style: .destructive,
                                          title: "Delete") { [weak self] a, b, c in
             guard let self = self else { return }
-            tempManager.deleteCoctailInfo(usingModel: self.viewModel.models[indexPath.row]) { bool in
-                print(bool)
-            }
+            tempManager.deleteCoctailInfo(usingModel: self.viewModel.models[indexPath.row]) { _ in}
             self.viewModel.refresh()
         }
         let swipeConfigure = UISwipeActionsConfiguration(actions: [action1])

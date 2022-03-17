@@ -1,11 +1,10 @@
-import UIKit
+import Foundation
 import FirebaseAuth
 
 protocol RegisterViewModelProtocol: AnyObject {
     func showAlert(message: String)
     func registerClicked(username: String, number: String, email: String, password: String)
     
-    //    var userArray: [UserInfo] { get set }
     var navigation: ((UIViewController)->())? {get set}
     var presentAlert: ((UIAlertController)->())? {get set}
 }
@@ -16,7 +15,6 @@ class RegisterViewModel: RegisterViewModelProtocol {
     
     var coreDataManager = CoreDataManager()
     var savedUser = UserData()
-    //    var userArray: [UserInfo] = []
     var user = UserInfo(username: "", email: "", number: "", password: "", userImage: "", userID: "")
     
     func createNewUser(username: String, userID: String, email: String, password: String, number: String, userImage: String) {

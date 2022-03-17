@@ -1,8 +1,13 @@
-import CoreData
 import UIKit
+import CoreData
 
 protocol CoreDataManagerProtocol: BasePersistentProtocol {
-    func getCoctailInfo(completion: @escaping ([FavoritesData]?) -> Void)
+    func saveCoctailInfo(usingModel model: CocktailInfo, user: UserData, image: Data, completion: @escaping (Bool) -> Void)
+    func getCoctailInfo(user: UserData, completion: @escaping ([FavoritesData]) -> Void)
+    func deleteCoctailInfo(usingModel model: FavoritesData, completion: @escaping (Bool) -> Void)
+    func saveUser(user: UserInfo, completion: @escaping (UserData) -> Void)
+    func getUser(completion: @escaping ([UserData]) -> Void)
+    func updateUserImage(with user: UserData, image: Data)
 }
 
 final class CoreDataManager: CoreDataManagerProtocol {
@@ -12,8 +17,8 @@ final class CoreDataManager: CoreDataManagerProtocol {
         let obj = NSManagedObject(entity: description, insertInto: context)
         return obj
     }
-    //user: UserData,
-    func saveCoctailInfo(usingModel model: CocktailInfo, image: Data, completion: @escaping (Bool) -> Void) {
+    
+    func saveCoctailInfo(usingModel model: CocktailInfo, user: UserData, image: Data, completion: @escaping (Bool) -> Void) {
         guard let context = context else { return }
         
         let saveCoctailInfo = FavoritesData(context: context)
@@ -21,7 +26,8 @@ final class CoreDataManager: CoreDataManagerProtocol {
         saveCoctailInfo.category = model.category
         saveCoctailInfo.instruction = model.instruction
         saveCoctailInfo.image = image
-        //        saveCoctailInfo.user = user
+        saveCoctailInfo.user = user
+        
         do {
             try context.save()
         } catch {
@@ -29,17 +35,22 @@ final class CoreDataManager: CoreDataManagerProtocol {
         }
     }
     
-    func getCoctailInfo(completion: @escaping ([FavoritesData]?) -> Void) {
+    func getCoctailInfo(user: UserData, completion: @escaping ([FavoritesData]) -> Void) {
         guard let context = context else { return }
+        
+        var savedCocktailsArray = [FavoritesData]()
         
         do {
             let request = NSFetchRequest<FavoritesData>(entityName: "FavoritesData")
-            let models = try context.fetch(request)
-            
-            completion(models)
+            let savedCocktails = try context.fetch(request)
+            for savedCocktail in savedCocktails {
+                if savedCocktail.user?.userID == user.userID {
+                    savedCocktailsArray.append(savedCocktail)
+                }
+            }
+            completion(savedCocktailsArray)
         } catch {
-            print(error)
-            completion(nil)
+            completion([])
         }
     }
     
@@ -81,17 +92,28 @@ final class CoreDataManager: CoreDataManagerProtocol {
         }
     }
     
-    func getUser(user: UserData, completion: @escaping ([UserData]?) -> Void) {
+    func getUser(completion: @escaping ([UserData]) -> Void) {
         guard let context = context else { return }
         
         do {
             let request = NSFetchRequest<UserData>(entityName: "UserData")
             let user = try context.fetch(request)
-            
             completion(user)
         } catch {
             print(error)
-            completion(nil)
+            completion([])
+        }
+    }
+    
+    func updateUserImage(with user: UserData, image: Data) {
+        guard let context = context else { return }
+        
+        user.userImage = image
+        
+        do {
+            try context.save()
+        } catch {
         }
     }
 }
+

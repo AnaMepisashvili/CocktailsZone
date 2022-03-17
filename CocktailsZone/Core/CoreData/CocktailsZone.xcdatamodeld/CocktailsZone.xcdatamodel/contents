@@ -9,10 +9,10 @@
     </entity>
     <entity name="UserData" representedClassName="UserData" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="number" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="userID" optional="YES" attributeType="String"/>
+        <attribute name="userImage" optional="YES" attributeType="Binary"/>
         <attribute name="username" optional="YES" attributeType="String"/>
         <relationship name="favourite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavoritesData" inverseName="user" inverseEntity="FavoritesData"/>
     </entity>

@@ -1,22 +1,14 @@
-import UIKit
+import Foundation
 import FirebaseAuth
 
-class FavoritesViewModel {
-    var reloadTableView: (()->())?
-    var models: [FavoritesData] = []
+class CocktailInfoViewModel {
+    var coreDataManager = CoreDataManager()
     
     var savedUsers = [UserData]()
     var savedUser = UserData()
     
-    var coreDataManager = CoreDataManager()
-    
-    func refresh() {
-        getUser()
-        coreDataManager.getCoctailInfo(user: savedUser) { [weak self] models in
-            guard let self = self else { return }
-            self.models = models ?? []
-            self.reloadTableView?()
-        }
+    func saveCoctailInfo(model: CocktailInfo, image: Data) {
+        coreDataManager.saveCoctailInfo(usingModel: model, user: self.savedUser, image: image, completion: { _ in })
     }
     
     func getUser() {

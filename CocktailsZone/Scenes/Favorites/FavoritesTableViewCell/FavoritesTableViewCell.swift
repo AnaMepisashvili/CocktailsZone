@@ -8,9 +8,9 @@ class FavoritesTableViewCell: UITableViewCell {
     var isFavourite:Bool = true
     var favoritesCoctails: FavoritesData?
     
-    func configure(with vm: FavoritesData) {
-        cocktailNameLabel.text = vm.coctailName
-        categoryLabel.text = vm.category
-        cocktailImageView.image = UIImage(data: (vm.image ?? UIImage(named: "FirstSlide")?.pngData())!)
+    func configure(with viewModel: FavoritesData) {
+        cocktailNameLabel.text = viewModel.cocktailName
+        categoryLabel.text = viewModel.category
+        cocktailImageView.image = UIImage(data: (viewModel.image ?? UIImage(named: "FirstSlide")?.pngData())!)
     }
 }

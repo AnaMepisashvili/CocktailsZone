@@ -5,7 +5,6 @@ protocol AlcoholServiceProtocol: AnyObject {
 }
 
 class AlcoholApi: AlcoholServiceProtocol {
-    
     func fetchAlcoholCocktail(completion: @escaping (([Cocktail]) -> Void)) {
         let url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
         

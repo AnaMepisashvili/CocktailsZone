@@ -107,6 +107,7 @@
                         <outlet property="cocktailImage" destination="tZ8-Fx-3uy" id="5i3-Jj-PWc"/>
                         <outlet property="cocktailInstructionLabel" destination="Z4z-xK-Nqe" id="vxe-Gs-n4f"/>
                         <outlet property="cocktailNameLabel" destination="grO-Z1-uNG" id="WGn-qu-lfk"/>
+                        <outlet property="favoriteStarButton" destination="onS-I6-4E4" id="lQd-fb-F8o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
