@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search-->
+        <!--Category-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="Menu" id="Y6W-OH-hqX" customClass="MenuViewController" customModule="CocktailsZone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Category" id="Y6W-OH-hqX" customClass="CategoryViewController" customModule="CocktailsZone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,8 +28,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="80J-Io-r9w">
-                                <rect key="frame" x="49.666666666666657" y="253.66666666666663" width="315" height="150"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="80J-Io-r9w">
+                                <rect key="frame" x="132" y="253.66666666666663" width="150" height="320"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vm-1j-e1s">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -49,11 +49,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="searchCoctailByName:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eG1-Q0-NMj"/>
+                                            <action selector="searchCoctailByName:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zsc-mW-YOL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFv-UX-L4x">
-                                        <rect key="frame" x="165" y="0.0" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="170.00000000000003" width="150" height="149.99999999999997"/>
                                         <color key="backgroundColor" red="0.59607843140000005" green="0.83137254900000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -66,7 +66,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="filterByAlcoholic:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W5W-7e-xca"/>
+                                            <action selector="filterByAlcoholic:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kF1-p6-u3A"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -86,11 +86,11 @@
                             <constraint firstItem="80J-Io-r9w" firstAttribute="top" secondItem="uA1-gx-7LT" secondAttribute="bottom" constant="100" id="g70-CT-rYv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="Ufl-o2-7WO"/>
+                    <tabBarItem key="tabBarItem" title="Category" image="square.inset.filled" catalog="system" id="Ufl-o2-7WO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="filterByAlcoholicButton" destination="vFv-UX-L4x" id="8Uz-68-2ZD"/>
-                        <outlet property="searchCoctailByNameButton" destination="8Vm-1j-e1s" id="T6T-pl-UUz"/>
+                        <outlet property="filterByAlcoholicButton" destination="vFv-UX-L4x" id="aVl-wt-FXw"/>
+                        <outlet property="searchCoctailByNameButton" destination="8Vm-1j-e1s" id="oFy-ng-4Mc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,7 +99,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="square.inset.filled" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

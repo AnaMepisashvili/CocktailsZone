@@ -3,6 +3,7 @@ import UIKit
 class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchAnimationLabel: UILabel!
     
     private var viewModel: SearchViewModelProtocol!
     var apiService: CocktailServiceProtocol!
@@ -12,13 +13,13 @@ class SearchViewController: UIViewController {
         searchBar.delegate = self
         configureNavigationController()
     }
-    
-    override func viewWillLayoutSubviews() {
-        title = "Cocktails"
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        searchAnimation()
     }
     
-    func configureNavigationController() {
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    private func configureNavigationController() {
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Cocktails", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor(named: "#98D4D9")
     }
     
@@ -27,6 +28,15 @@ class SearchViewController: UIViewController {
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
+    }
+    
+    func searchAnimation() {
+        searchAnimationLabel.text = ""
+        let animation = "Search your favourite cocktail"
+        for char in animation {
+            searchAnimationLabel.text! += "\(char)"
+            RunLoop.current.run(until: Date()+0.1)
+        }
     }
 }
 
@@ -38,7 +48,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(CoctailTableViewCell.self, for: indexPath)
         cell.configure(with: viewModel.cocktailArray[indexPath.row])
-        cell.favorite = {}
         return cell
     }
     
@@ -53,6 +62,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
+            searchAnimationLabel.isHidden = true
             setupTableView()
             apiService = CocktailsApi()
             viewModel = SearchViewModel(apiService: apiService)

@@ -2,9 +2,9 @@ import UIKit
 import CoreData
 
 protocol CoreDataManagerProtocol: BasePersistentProtocol {
-    func saveCoctailInfo(usingModel model: CocktailInfo, user: UserData, image: Data, completion: @escaping (Bool) -> Void)
+    func saveCoctailInfo(usingModel model: CocktailInfo, user: UserData, image: Data, completion: @escaping (FavoritesData) -> Void)
     func getCoctailInfo(user: UserData, completion: @escaping ([FavoritesData]) -> Void)
-    func deleteCoctailInfo(usingModel model: FavoritesData, completion: @escaping (Bool) -> Void)
+    func deleteCocktailInfo(usingModel cocktailName: String, completion: @escaping ([FavoritesData]) -> Void)
     func saveUser(user: UserInfo, completion: @escaping (UserData) -> Void)
     func getUser(completion: @escaping ([UserData]) -> Void)
     func updateUserImage(with user: UserData, image: Data)
@@ -14,11 +14,11 @@ final class CoreDataManager: CoreDataManagerProtocol {
     var modelObject: NSManagedObject? {
         guard let context = context else { return nil }
         guard let description = NSEntityDescription.entity(forEntityName: "FavoritesData", in: context) else { return nil }
-        let obj = NSManagedObject(entity: description, insertInto: context)
-        return obj
+        let object = NSManagedObject(entity: description, insertInto: context)
+        return object
     }
     
-    func saveCoctailInfo(usingModel model: CocktailInfo, user: UserData, image: Data, completion: @escaping (Bool) -> Void) {
+    func saveCoctailInfo(usingModel model: CocktailInfo, user: UserData, image: Data, completion: @escaping (FavoritesData) -> Void) {
         guard let context = context else { return }
         
         let saveCoctailInfo = FavoritesData(context: context)
@@ -30,6 +30,7 @@ final class CoreDataManager: CoreDataManagerProtocol {
         
         do {
             try context.save()
+            completion(saveCoctailInfo)
         } catch {
             print(error)
         }
@@ -54,7 +55,7 @@ final class CoreDataManager: CoreDataManagerProtocol {
         }
     }
     
-    func deleteCoctailInfo(usingModel model: FavoritesData, completion: @escaping (Bool) -> Void) {
+    func deleteCocktailInfo(usingModel cocktailName: String, completion: @escaping ([FavoritesData]) -> Void) {
         guard let context = context else { return }
         
         do {
@@ -62,14 +63,14 @@ final class CoreDataManager: CoreDataManagerProtocol {
             let result = try context.fetch(request)
             
             result.forEach {
-                if $0.cocktailName == model.cocktailName {
+                if $0.cocktailName == cocktailName {
                     context.delete($0)
-                    completion(true)
                 }
             }
             try context.save()
+            completion(result)
         } catch {
-            completion(false)
+            completion([])
             print(error)
         }
     }

@@ -41,28 +41,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFe-tP-qQD">
-                        <rect key="frame" x="306" y="28" width="25" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="GH9-7L-276"/>
-                            <constraint firstAttribute="width" constant="25" id="yVh-k6-3dd"/>
-                        </constraints>
-                        <color key="tintColor" red="0.53790234299999995" green="0.83137254900000002" blue="0.85092359520000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system" title=""/>
-                        <connections>
-                            <action selector="didTapStar:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TWG-ag-i3u"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="pdv-WH-ysP" secondAttribute="bottom" constant="23" id="0T0-cn-7Iq"/>
-                    <constraint firstAttribute="trailing" secondItem="lFe-tP-qQD" secondAttribute="trailing" constant="20" id="4Z6-ip-rNz"/>
                     <constraint firstItem="QHY-RH-37r" firstAttribute="leading" secondItem="ETi-lo-TKA" secondAttribute="trailing" constant="16" id="KJN-x4-CmP"/>
                     <constraint firstItem="QHY-RH-37r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="28" id="MeQ-au-X5F"/>
                     <constraint firstItem="ETi-lo-TKA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="UnO-Xi-ZPp"/>
-                    <constraint firstItem="lFe-tP-qQD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="28" id="XO0-SB-Vyg"/>
-                    <constraint firstItem="lFe-tP-qQD" firstAttribute="leading" secondItem="QHY-RH-37r" secondAttribute="trailing" constant="44.5" id="blw-dX-3w8"/>
                     <constraint firstAttribute="bottom" secondItem="ETi-lo-TKA" secondAttribute="bottom" constant="16" id="fLN-cv-zOb"/>
                     <constraint firstItem="ETi-lo-TKA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="hbc-iS-z26"/>
                     <constraint firstAttribute="trailingMargin" secondItem="pdv-WH-ysP" secondAttribute="trailing" constant="20" id="nv2-yt-h39"/>
@@ -74,13 +58,11 @@
                 <outlet property="categoryLabel" destination="pdv-WH-ysP" id="on1-WN-hDg"/>
                 <outlet property="cocktailImage" destination="ETi-lo-TKA" id="i5H-bc-B7y"/>
                 <outlet property="cocktailNameLabel" destination="QHY-RH-37r" id="8Gp-xL-HoF"/>
-                <outlet property="favouriteStarButton" destination="lFe-tP-qQD" id="sQd-n7-veg"/>
             </connections>
             <point key="canvasLocation" x="-123.91304347826087" y="175.44642857142856"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

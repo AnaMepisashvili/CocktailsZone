@@ -30,7 +30,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NE6-Jy-GQ9" secondAttribute="bottom" id="y7M-gi-ScJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" id="wKk-UZ-IV1"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="wKk-UZ-IV1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="NE6-Jy-GQ9" id="mCH-8c-BbP"/>
@@ -42,7 +42,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

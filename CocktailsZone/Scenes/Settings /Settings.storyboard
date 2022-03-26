@@ -53,12 +53,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEi-Ic-7jk">
-                                <rect key="frame" x="20" y="223" width="280" height="32"/>
+                                <rect key="frame" x="20" y="50" width="280" height="230"/>
                                 <color key="tintColor" red="0.53790234296476303" green="0.83137254900000002" blue="0.85092359520000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Edit">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="uploadImageAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ckO-Zj-HjK"/>
                                 </connections>
@@ -67,16 +65,17 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vEi-Ic-7jk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="3gN-K2-EBE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vEi-Ic-7jk" secondAttribute="trailing" constant="20" id="5Qr-1K-64Q"/>
                             <constraint firstItem="9ms-I2-dgj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="A5K-3V-tN6"/>
+                            <constraint firstItem="Kpv-Xi-AC3" firstAttribute="top" secondItem="vEi-Ic-7jk" secondAttribute="bottom" constant="30" id="ABQ-gh-hRH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HHK-xa-n8d" secondAttribute="bottom" constant="70" id="GWX-XL-CES"/>
-                            <constraint firstItem="vEi-Ic-7jk" firstAttribute="top" secondItem="9ms-I2-dgj" secondAttribute="bottom" constant="-57" id="MWJ-6p-kfy"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vEi-Ic-7jk" secondAttribute="trailing" constant="20" id="SHb-oa-pq4"/>
                             <constraint firstItem="Kpv-Xi-AC3" firstAttribute="top" secondItem="9ms-I2-dgj" secondAttribute="bottom" constant="30" id="U3Y-Yd-HxN"/>
-                            <constraint firstItem="vEi-Ic-7jk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Vjo-D9-d2W"/>
                             <constraint firstItem="9ms-I2-dgj" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bMQ-LU-S9R"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kpv-Xi-AC3" secondAttribute="trailing" constant="20" id="eBB-Ud-btj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HHK-xa-n8d" secondAttribute="trailing" constant="50" id="rXA-CM-zP2"/>
                             <constraint firstItem="HHK-xa-n8d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="rZ8-4A-fJG"/>
+                            <constraint firstItem="vEi-Ic-7jk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="w2a-1Y-2rx"/>
                             <constraint firstItem="Kpv-Xi-AC3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="z5B-YS-70B"/>
                         </constraints>
                     </view>
@@ -91,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+            <point key="canvasLocation" x="136.875" y="90.845070422535215"/>
         </scene>
     </scenes>
     <resources>

@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 class SettingsViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
@@ -11,7 +12,6 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-//        uploadImageButton.isHidden = true
         setupViewModel()
     }
     
@@ -40,6 +40,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func LogOut(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+        }
+        
         let sb = UIStoryboard(name: "Login", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
         navigationController?.pushViewController(vc, animated: true)
@@ -60,4 +65,3 @@ extension SettingsViewController: UIImagePickerControllerDelegate, UINavigationC
         picker.dismiss(animated: true, completion: nil)
     }
 }
-

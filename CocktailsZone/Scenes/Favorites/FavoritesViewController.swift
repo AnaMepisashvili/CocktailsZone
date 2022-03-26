@@ -9,10 +9,16 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         configureViewModel()
         configureTableView()
+        configureNavigationController()
     }
     
-    override func viewWillLayoutSubviews() {
-        title = "Favorites"
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.refresh()
+    }
+    func configureNavigationController() {
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Favourites", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "#98D4D9")
     }
     
     func configureViewModel() {
@@ -52,15 +58,15 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let tempManager = CoreDataManager()
         
-        let action1 = UIContextualAction(style: .destructive,
+        let deleteFavoriteCocktail = UIContextualAction(style: .destructive,
                                          title: "Delete") { [weak self] a, b, c in
             guard let self = self else { return }
-            tempManager.deleteCoctailInfo(usingModel: self.viewModel.models[indexPath.row]) { _ in}
+            self.viewModel.deleteCocktail(with: self.viewModel.models[indexPath.row].cocktailName ?? "")
             self.viewModel.refresh()
         }
-        let swipeConfigure = UISwipeActionsConfiguration(actions: [action1])
+        
+        let swipeConfigure = UISwipeActionsConfiguration(actions: [deleteFavoriteCocktail])
         return swipeConfigure
     }
 }

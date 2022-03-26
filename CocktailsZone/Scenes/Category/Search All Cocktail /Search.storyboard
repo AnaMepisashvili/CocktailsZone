@@ -25,11 +25,19 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqg-qE-62U">
+                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.59607843137254901" green="0.83137254901960778" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jqg-qE-62U" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="E5x-Cn-1oZ"/>
                             <constraint firstItem="LjL-gS-Ufo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Hnj-Pr-EAy"/>
+                            <constraint firstItem="jqg-qE-62U" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Jra-1S-2jf"/>
                             <constraint firstItem="LjL-gS-Ufo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Kka-5J-VDq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LjL-gS-Ufo" secondAttribute="trailing" id="MF1-XY-tQe"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="LjL-gS-Ufo" secondAttribute="bottom" id="aFk-aA-IAs"/>
@@ -38,6 +46,7 @@
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="NzE-07-d9V"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="searchAnimationLabel" destination="jqg-qE-62U" id="2iU-c0-xgo"/>
                         <outlet property="searchBar" destination="0vG-d4-wZO" id="lAy-fp-Bn8"/>
                         <outlet property="tableView" destination="LjL-gS-Ufo" id="9Hz-gj-gdV"/>
                     </connections>

@@ -13,6 +13,7 @@
 		2B27CE8A27BA754900D7DA1B /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B27CE8827BA754900D7DA1B /* Onboarding.storyboard */; };
 		2B27CE8D27BA754900D7DA1B /* CocktailsZone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B27CE8B27BA754900D7DA1B /* CocktailsZone.xcdatamodeld */; };
 		2B27CE9227BA754A00D7DA1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B27CE9027BA754A00D7DA1B /* LaunchScreen.storyboard */; };
+		2B3CAEE927EC942A005D80AC /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CAEE827EC942A005D80AC /* UIButton+Extension.swift */; };
 		2B5420B827BA7E8800E82EA7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420B727BA7E8800E82EA7 /* OnboardingViewController.swift */; };
 		2B5420C427BA808900E82EA7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5420C327BA808900E82EA7 /* RegisterViewController.swift */; };
 		2B5420C627BA809300E82EA7 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5420C527BA809300E82EA7 /* Register.storyboard */; };
@@ -45,8 +46,8 @@
 		2B94A00B27BD4CF2001FFB18 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A00A27BD4CF2001FFB18 /* SearchViewModel.swift */; };
 		2B94A01227BD5644001FFB18 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01127BD5644001FFB18 /* UITableViewCell+Extensions.swift */; };
 		2B94A01427BD566A001FFB18 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01327BD566A001FFB18 /* UITableView+Extensions.swift */; };
-		2B94A01D27C11548001FFB18 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01C27C11548001FFB18 /* MenuViewController.swift */; };
-		2B94A01F27C11552001FFB18 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A01E27C11552001FFB18 /* Menu.storyboard */; };
+		2B94A01D27C11548001FFB18 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A01C27C11548001FFB18 /* CategoryViewController.swift */; };
+		2B94A01F27C11552001FFB18 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A01E27C11552001FFB18 /* Category.storyboard */; };
 		2B94A02127C11775001FFB18 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02027C11775001FFB18 /* FilterViewController.swift */; };
 		2B94A02327C1177F001FFB18 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A02227C1177F001FFB18 /* Filter.storyboard */; };
 		2B94A02927C11DC6001FFB18 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A02727C11DC6001FFB18 /* FilterTableViewCell.swift */; };
@@ -61,7 +62,7 @@
 		2BAC5CDA27D63E30007B96F5 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAC5CD927D63E30007B96F5 /* FavoritesViewModel.swift */; };
 		2BAF781227E21B98004E84D2 /* CocktailInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF781127E21B98004E84D2 /* CocktailInfoViewModel.swift */; };
 		2BB5DCF027DB53550030CF1A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5DCEF27DB53550030CF1A /* SettingsViewModel.swift */; };
-		2BB5DCF227DFBC560030CF1A /* CocktailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5DCF127DFBC560030CF1A /* CocktailManager.swift */; };
+		2BC6AAE527E8F43C00FEA8EB /* MoveCocktailInfoFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6AAE427E8F43C00FEA8EB /* MoveCocktailInfoFrom.swift */; };
 		2BF0F62927CE5BE5007099A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF0F62827CE5BE5007099A1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		2B27CE8C27BA754900D7DA1B /* CocktailsZone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CocktailsZone.xcdatamodel; sourceTree = "<group>"; };
 		2B27CE9127BA754A00D7DA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B27CE9327BA754A00D7DA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B3CAEE827EC942A005D80AC /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		2B5420B727BA7E8800E82EA7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2B5420C327BA808900E82EA7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2B5420C527BA809300E82EA7 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -107,8 +109,8 @@
 		2B94A00A27BD4CF2001FFB18 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2B94A01127BD5644001FFB18 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		2B94A01327BD566A001FFB18 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
-		2B94A01C27C11548001FFB18 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		2B94A01E27C11552001FFB18 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		2B94A01C27C11548001FFB18 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		2B94A01E27C11552001FFB18 /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
 		2B94A02027C11775001FFB18 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		2B94A02227C1177F001FFB18 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		2B94A02727C11DC6001FFB18 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
@@ -123,7 +125,7 @@
 		2BAC5CD927D63E30007B96F5 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		2BAF781127E21B98004E84D2 /* CocktailInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailInfoViewModel.swift; sourceTree = "<group>"; };
 		2BB5DCEF27DB53550030CF1A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		2BB5DCF127DFBC560030CF1A /* CocktailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailManager.swift; sourceTree = "<group>"; };
+		2BC6AAE427E8F43C00FEA8EB /* MoveCocktailInfoFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCocktailInfoFrom.swift; sourceTree = "<group>"; };
 		2BF0F62827CE5BE5007099A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		59CD71E1E674A51609C3B126 /* Pods_CocktailsZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailsZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		874A7BFCAA1AC1358744AF7C /* Pods-CocktailsZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailsZone.release.xcconfig"; path = "Target Support Files/Pods-CocktailsZone/Pods-CocktailsZone.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				2B94A01127BD5644001FFB18 /* UITableViewCell+Extensions.swift */,
 				2B94A01327BD566A001FFB18 /* UITableView+Extensions.swift */,
+				2B3CAEE827EC942A005D80AC /* UIButton+Extension.swift */,
 				2B566A9F27D0E82900849A55 /* CornerRadius+Extention.swift */,
 				2B566A9D27D0CD4D00849A55 /* PasswordValid+Extension.swift */,
 			);
@@ -217,7 +220,6 @@
 				2B27CE9E27BA767800D7DA1B /* Models */,
 				2B27CE9C27BA762600D7DA1B /* Extensions */,
 				2B27CEA327BA76F400D7DA1B /* Network Layer */,
-				2BB5DCF327E0CC920030CF1A /* Utility */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -229,6 +231,7 @@
 				2B94A00127BD4B39001FFB18 /* CocktailInfo.swift */,
 				2B7EE12027C8E05500CB08BC /* Cocktail.swift */,
 				2BA18DAB27D8D96C00000A8D /* UserInfo.swift */,
+				2BC6AAE427E8F43C00FEA8EB /* MoveCocktailInfoFrom.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,7 +244,7 @@
 				2B5420B927BA7F8100E82EA7 /* Login */,
 				2B5420BA27BA7F9700E82EA7 /* Register */,
 				2B5420BB27BA7FAC00E82EA7 /* Tab Bar Controller */,
-				2B5420BC27BA800000E82EA7 /* Search  */,
+				2B5420BC27BA800000E82EA7 /* Category */,
 				2B5420BD27BA802400E82EA7 /* Favorites */,
 				2B5420BE27BA803C00E82EA7 /* Settings  */,
 			);
@@ -280,7 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				2B27CE8B27BA754900D7DA1B /* CocktailsZone.xcdatamodeld */,
-				2BB5DCF127DFBC560030CF1A /* CocktailManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -323,14 +325,15 @@
 			path = "Tab Bar Controller";
 			sourceTree = "<group>";
 		};
-		2B5420BC27BA800000E82EA7 /* Search  */ = {
+		2B5420BC27BA800000E82EA7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				2B94A01927C11459001FFB18 /* Menu  */,
+				2B94A01C27C11548001FFB18 /* CategoryViewController.swift */,
+				2B94A01E27C11552001FFB18 /* Category.storyboard */,
 				2B94A01A27C11468001FFB18 /* Search All Cocktail  */,
 				2B94A01B27C114B0001FFB18 /* Filter */,
 			);
-			path = "Search ";
+			path = Category;
 			sourceTree = "<group>";
 		};
 		2B5420BD27BA802400E82EA7 /* Favorites */ = {
@@ -388,15 +391,6 @@
 			path = "Table View Cell";
 			sourceTree = "<group>";
 		};
-		2B94A01927C11459001FFB18 /* Menu  */ = {
-			isa = PBXGroup;
-			children = (
-				2B94A01C27C11548001FFB18 /* MenuViewController.swift */,
-				2B94A01E27C11552001FFB18 /* Menu.storyboard */,
-			);
-			path = "Menu ";
-			sourceTree = "<group>";
-		};
 		2B94A01A27C11468001FFB18 /* Search All Cocktail  */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,13 +440,6 @@
 				2B94A03727C1426F001FFB18 /* CocktailInfo.storyboard */,
 			);
 			path = "Cocktail Info";
-			sourceTree = "<group>";
-		};
-		2BB5DCF327E0CC920030CF1A /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		40DA79EB531FDD661D729910 /* Pods */ = {
@@ -535,7 +522,7 @@
 				2B5420C827BA80BB00E82EA7 /* TabBarController.storyboard in Resources */,
 				2B94A00927BD4C9F001FFB18 /* CoctailTableViewCell.xib in Resources */,
 				2B94A03827C1426F001FFB18 /* CocktailInfo.storyboard in Resources */,
-				2B94A01F27C11552001FFB18 /* Menu.storyboard in Resources */,
+				2B94A01F27C11552001FFB18 /* Category.storyboard in Resources */,
 				2B94A02A27C11DC6001FFB18 /* FilterTableViewCell.xib in Resources */,
 				2B27CE9227BA754A00D7DA1B /* LaunchScreen.storyboard in Resources */,
 				2B27CE8A27BA754900D7DA1B /* Onboarding.storyboard in Resources */,
@@ -623,9 +610,9 @@
 				2B566AA027D0E82900849A55 /* CornerRadius+Extention.swift in Sources */,
 				2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */,
 				2B566A9C27D0B47A00849A55 /* RegisterViewModel.swift in Sources */,
+				2BC6AAE527E8F43C00FEA8EB /* MoveCocktailInfoFrom.swift in Sources */,
 				2B5420D427BA8CBC00E82EA7 /* OnboardingSlide.swift in Sources */,
-				2BB5DCF227DFBC560030CF1A /* CocktailManager.swift in Sources */,
-				2B94A01D27C11548001FFB18 /* MenuViewController.swift in Sources */,
+				2B94A01D27C11548001FFB18 /* CategoryViewController.swift in Sources */,
 				2B94A01427BD566A001FFB18 /* UITableView+Extensions.swift in Sources */,
 				2B7EE12327C8E96300CB08BC /* FilterViewModel.swift in Sources */,
 				2B7EE12127C8E05500CB08BC /* Cocktail.swift in Sources */,
@@ -635,6 +622,7 @@
 				2B94A00827BD4C9F001FFB18 /* CoctailTableViewCell.swift in Sources */,
 				2B94A02927C11DC6001FFB18 /* FilterTableViewCell.swift in Sources */,
 				2BAC5CCE27D62A80007B96F5 /* CoreDataManager.swift in Sources */,
+				2B3CAEE927EC942A005D80AC /* UIButton+Extension.swift in Sources */,
 				2BA18DAC27D8D96C00000A8D /* UserInfo.swift in Sources */,
 				2B94A01227BD5644001FFB18 /* UITableViewCell+Extensions.swift in Sources */,
 				2B27CE8D27BA754900D7DA1B /* CocktailsZone.xcdatamodeld in Sources */,
