@@ -63,6 +63,7 @@
 		2BAF781227E21B98004E84D2 /* CocktailInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF781127E21B98004E84D2 /* CocktailInfoViewModel.swift */; };
 		2BB5DCF027DB53550030CF1A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5DCEF27DB53550030CF1A /* SettingsViewModel.swift */; };
 		2BC6AAE527E8F43C00FEA8EB /* MoveCocktailInfoFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6AAE427E8F43C00FEA8EB /* MoveCocktailInfoFrom.swift */; };
+		2BCF4DC927F5E73600BBF5BA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF4DC827F5E73600BBF5BA /* UIView+Extension.swift */; };
 		2BF0F62927CE5BE5007099A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BF0F62827CE5BE5007099A1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		2BAF781127E21B98004E84D2 /* CocktailInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailInfoViewModel.swift; sourceTree = "<group>"; };
 		2BB5DCEF27DB53550030CF1A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		2BC6AAE427E8F43C00FEA8EB /* MoveCocktailInfoFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCocktailInfoFrom.swift; sourceTree = "<group>"; };
+		2BCF4DC827F5E73600BBF5BA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2BF0F62827CE5BE5007099A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		59CD71E1E674A51609C3B126 /* Pods_CocktailsZone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailsZone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		874A7BFCAA1AC1358744AF7C /* Pods-CocktailsZone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailsZone.release.xcconfig"; path = "Target Support Files/Pods-CocktailsZone/Pods-CocktailsZone.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				2B94A01127BD5644001FFB18 /* UITableViewCell+Extensions.swift */,
 				2B94A01327BD566A001FFB18 /* UITableView+Extensions.swift */,
 				2B3CAEE827EC942A005D80AC /* UIButton+Extension.swift */,
+				2BCF4DC827F5E73600BBF5BA /* UIView+Extension.swift */,
 				2B566A9F27D0E82900849A55 /* CornerRadius+Extention.swift */,
 				2B566A9D27D0CD4D00849A55 /* PasswordValid+Extension.swift */,
 			);
@@ -606,6 +609,7 @@
 				2BAC5CDA27D63E30007B96F5 /* FavoritesViewModel.swift in Sources */,
 				2B94A00027BD4B06001FFB18 /* CocktailsApi.swift in Sources */,
 				2B94A03627C14267001FFB18 /* CocktailInfoViewController.swift in Sources */,
+				2BCF4DC927F5E73600BBF5BA /* UIView+Extension.swift in Sources */,
 				2B7EE12727C8ED2A00CB08BC /* NonAlcoholApi.swift in Sources */,
 				2B566AA027D0E82900849A55 /* CornerRadius+Extention.swift in Sources */,
 				2B27CE8527BA754900D7DA1B /* SceneDelegate.swift in Sources */,

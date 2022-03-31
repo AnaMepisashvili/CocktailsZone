@@ -3,11 +3,12 @@ import FirebaseAuth
 
 class FavoritesViewModel {
     var reloadTableView: (()->())?
-    var models: [FavoritesData] = [FavoritesData](){
+    var favouriteCocktail: [FavoritesData] = [FavoritesData]() {
         didSet{
             self.reloadTableView?()
         }
     }
+
     var savedUsers = [UserData]()
     var savedUser = UserData()
     
@@ -17,7 +18,7 @@ class FavoritesViewModel {
         getUser()
         coreDataManager.getCoctailInfo(user: savedUser) { [weak self] models in
             guard let self = self else { return }
-            self.models = models
+            self.favouriteCocktail = models
         }
     }
     
@@ -35,7 +36,7 @@ class FavoritesViewModel {
     
     func deleteCocktail(with coctailName: String){
         coreDataManager.deleteCocktailInfo(usingModel: coctailName) { cocktails in
-            self.models = cocktails
+            self.favouriteCocktail = cocktails
         }
     }
 }

@@ -72,6 +72,12 @@ class CocktailInfoViewController: UIViewController {
         }
     }
     
+    @IBAction func shareButton(_ sender: Any) {
+        let image = self.view.takeScreenshot()
+        let shareSheet = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+                present(shareSheet, animated: true)
+    }
+    
     @IBAction func favoriteButton(_ sender: Any) {
         guard let model = coctail else { return }
         
