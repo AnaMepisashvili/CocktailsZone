@@ -42,10 +42,12 @@ class SettingsViewController: UIViewController {
     @IBAction func LogOut(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-        } catch {}
+        } catch {
+            print(error)
+        }
         
         let sb = UIStoryboard(name: "Login", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        guard let vc = sb.instantiateViewController(withIdentifier: "Login") as? LoginViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
     }
 }

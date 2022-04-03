@@ -77,7 +77,7 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "CocktailInfo", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "CocktailInfo") as! CocktailInfoViewController
+        guard let vc = sb.instantiateViewController(withIdentifier: "CocktailInfo") as? CocktailInfoViewController else {return}
         vc.savedCoctail = viewModel.favouriteCocktail[indexPath.row]
         vc.controller = .favorite
         self.navigationController?.pushViewController(vc, animated: true)

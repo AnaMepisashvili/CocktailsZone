@@ -114,6 +114,7 @@ final class CoreDataManager: CoreDataManagerProtocol {
         do {
             try context.save()
         } catch {
+            print(error)
         }
     }
 }

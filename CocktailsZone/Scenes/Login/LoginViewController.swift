@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func registerActionButton(_ sender: Any) {
         let sb = UIStoryboard(name: "Register", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Register") as! RegisterViewController
+        guard let vc = sb.instantiateViewController(withIdentifier: "Register") as? RegisterViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
     }
 }

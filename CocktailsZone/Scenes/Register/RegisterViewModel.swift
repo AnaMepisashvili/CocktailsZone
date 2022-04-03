@@ -92,7 +92,7 @@ class RegisterViewModel: RegisterViewModelProtocol {
         let alert = UIAlertController(title: "Login", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok", style: .cancel, handler: { alert in
             let sb = UIStoryboard(name: "Login", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+            guard let vc = sb.instantiateViewController(withIdentifier: "Login") as? LoginViewController else {return}
             self.navigation?(vc)
         }))
         self.presentAlert?(alert)

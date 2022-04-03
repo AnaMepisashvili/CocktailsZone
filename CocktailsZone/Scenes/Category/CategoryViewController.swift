@@ -12,14 +12,14 @@ class CategoryViewController: UIViewController {
     @IBAction func searchCoctailByName(_ sender: UIButton) {
         sender.pulsate()
         let sb = UIStoryboard(name: "Search", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Search") as! SearchViewController
+        guard let vc = sb.instantiateViewController(withIdentifier: "Search") as? SearchViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func filterByAlcoholic(_ sender: UIButton) {
         sender.pulsate()
         let sb = UIStoryboard(name: "Filter", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Filter") as! FilterViewController
+        guard let vc = sb.instantiateViewController(withIdentifier: "Filter") as? FilterViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
     }
 }

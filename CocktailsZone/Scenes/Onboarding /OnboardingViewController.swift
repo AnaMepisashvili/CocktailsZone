@@ -47,7 +47,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
     
     func moveToLoginScreen() {
         let sb = UIStoryboard(name: "Login", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        guard let vc = sb.instantiateViewController(withIdentifier: "Login") as? LoginViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -61,7 +61,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegateFlowLa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingCollectionViewCell.identifier, for: indexPath) as! OnboardingCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingCollectionViewCell.identifier, for: indexPath) as? OnboardingCollectionViewCell else {return .init()}
         cell.setup(slides[indexPath.row])
         return cell
     }

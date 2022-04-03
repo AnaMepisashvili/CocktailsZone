@@ -57,11 +57,13 @@ class CocktailInfoViewController: UIViewController {
     }
     
     func fillSavedCoctailInfo() {
+        guard let imageData = savedCoctail?.image else {return}
+
         favoriteStarButton.isHidden = true
         cocktailNameLabel.text = savedCoctail?.cocktailName
         cocktailInstructionTextView.text = savedCoctail?.instruction
         categoryLabel.text = savedCoctail?.category
-        cocktailImage.image = UIImage(data: (savedCoctail?.image)!)
+        cocktailImage.image = UIImage(data: imageData)
     }
     
     func ifSaved() {
